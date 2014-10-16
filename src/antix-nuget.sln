@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Antix.NuGet.Server", "Antix.Nuget.Server\Antix.NuGet.Server.csproj", "{396B9153-9ACC-4022-88A9-8903F41CE65A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Antix.NuGet", "Antix.Nuget\Antix.NuGet.csproj", "{D031D772-6C75-45CC-B96C-97B88BAC661D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Antix", "Antix\Antix.csproj", "{B9EB61F3-E1A8-48DD-BE8D-337B4BB25F87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Antix.NuGet.API", "Antix.Nuget.API\Antix.NuGet.API.csproj", "{30014D7D-169E-4838-870B-9B4A0CFB64DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Antix.NuGet.Tests", "Antix.Nuget.Tests\Antix.NuGet.Tests.csproj", "{2092D300-E6FC-49BF-B2F2-68D568B3D244}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5FAB2B8C-A3F0-4915-8D73-A7E67969FA5D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Antix.NuGet.Application", "Antix.NuGet.Application\Antix.NuGet.Application.csproj", "{2FA3AA00-9A59-49A2-B898-A46064B36FBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{396B9153-9ACC-4022-88A9-8903F41CE65A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{396B9153-9ACC-4022-88A9-8903F41CE65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{396B9153-9ACC-4022-88A9-8903F41CE65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{396B9153-9ACC-4022-88A9-8903F41CE65A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D031D772-6C75-45CC-B96C-97B88BAC661D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D031D772-6C75-45CC-B96C-97B88BAC661D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D031D772-6C75-45CC-B96C-97B88BAC661D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D031D772-6C75-45CC-B96C-97B88BAC661D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9EB61F3-E1A8-48DD-BE8D-337B4BB25F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9EB61F3-E1A8-48DD-BE8D-337B4BB25F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9EB61F3-E1A8-48DD-BE8D-337B4BB25F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9EB61F3-E1A8-48DD-BE8D-337B4BB25F87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30014D7D-169E-4838-870B-9B4A0CFB64DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30014D7D-169E-4838-870B-9B4A0CFB64DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30014D7D-169E-4838-870B-9B4A0CFB64DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30014D7D-169E-4838-870B-9B4A0CFB64DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2092D300-E6FC-49BF-B2F2-68D568B3D244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2092D300-E6FC-49BF-B2F2-68D568B3D244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2092D300-E6FC-49BF-B2F2-68D568B3D244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2092D300-E6FC-49BF-B2F2-68D568B3D244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FA3AA00-9A59-49A2-B898-A46064B36FBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FA3AA00-9A59-49A2-B898-A46064B36FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FA3AA00-9A59-49A2-B898-A46064B36FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FA3AA00-9A59-49A2-B898-A46064B36FBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
