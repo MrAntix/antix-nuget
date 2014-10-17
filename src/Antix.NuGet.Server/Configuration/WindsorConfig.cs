@@ -77,7 +77,7 @@ namespace Antix.NuGet.Server.Configuration
                 );
             container.Register(
                 Classes
-                    .FromAssemblyContaining<FileSystemAddPackageService>()
+                    .FromAssemblyContaining<FileSystemPutPackageService>()
                     .BasedOn<IService>()
                     .WithServiceAllInterfaces()
                     .WithServiceSelf()

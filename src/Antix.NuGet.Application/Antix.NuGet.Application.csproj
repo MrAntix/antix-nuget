@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packages\FileSystemAddPackageService.cs" />
-    <Compile Include="Packages\FileSystemAddPackageServiceOptions.cs" />
+    <Compile Include="Packages\FileSystemPutPackageService.cs" />
+    <Compile Include="Packages\FileSystemPutPackageServiceOptions.cs" />
     <Compile Include="Packages\Models\FileSystemPackage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
