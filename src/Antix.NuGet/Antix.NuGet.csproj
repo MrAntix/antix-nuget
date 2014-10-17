@@ -39,6 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Packages\ISearchPackagesService.cs" />
+    <Compile Include="Packages\Models\IPackageMetadata.cs" />
+    <Compile Include="Packages\Models\Package.cs" />
+    <Compile Include="Packages\Models\SearchPackageCriteria.cs" />
+    <Compile Include="Packages\Models\SearchPackageResults.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Packages\Models\AddPackageRequest.cs" />
     <Compile Include="Packages\IAddPackageService.cs" />
