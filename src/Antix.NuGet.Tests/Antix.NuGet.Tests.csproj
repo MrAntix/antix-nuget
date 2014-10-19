@@ -81,19 +81,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Packages\PushPackageTest.cs" />
+    <Compile Include="Packages\Storage\FileSystemPackageMetadataStoreTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Resources\Antix.code.nupkg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Antix.NuGet.Application\Antix.NuGet.Application.csproj">
+      <Project>{2FA3AA00-9A59-49A2-B898-A46064B36FBD}</Project>
+      <Name>Antix.NuGet.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Antix.Nuget.Server\Antix.NuGet.Server.csproj">
       <Project>{396B9153-9ACC-4022-88A9-8903F41CE65A}</Project>
       <Name>Antix.NuGet.Server</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Antix.Nuget\Antix.NuGet.csproj">
+      <Project>{D031D772-6C75-45CC-B96C-97B88BAC661D}</Project>
+      <Name>Antix.NuGet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Antix\Antix.csproj">
+      <Project>{B9EB61F3-E1A8-48DD-BE8D-337B4BB25F87}</Project>
+      <Name>Antix</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

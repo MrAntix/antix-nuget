@@ -66,6 +66,12 @@
     <Compile Include="Http\Filters\Response\ResponseGlobalFilter.cs" />
     <Compile Include="Http\Filters\ServiceFilterProvider.cs" />
     <Compile Include="Http\HttpRequestMessageExtensions.cs" />
+    <Compile Include="IO\FileSystemChangedEvent.cs" />
+    <Compile Include="IO\FileSystemChangedEventType.cs" />
+    <Compile Include="IO\FileSystemChangeMonitor.cs" />
+    <Compile Include="IO\FileSystemChangeMonitorExtensions.cs" />
+    <Compile Include="IO\FileSystemChangeMonitorOptions.cs" />
+    <Compile Include="IO\IFileSystemChangeMonitor.cs" />
     <Compile Include="IO\IOExtensions.cs" />
     <Compile Include="Logging\Log.cs" />
     <Compile Include="Logging\Log.Delegates.cs" />
@@ -79,6 +85,7 @@
     <Compile Include="Services\ServiceHandler.cs" />
     <Compile Include="StringExtensions.cs" />
     <Compile Include="StringSearch.cs" />
+    <Compile Include="Timers\Schedule.cs" />
     <Compile Include="Xml\DynamicXml.cs" />
   </ItemGroup>
   <ItemGroup>

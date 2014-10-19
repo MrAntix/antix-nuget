@@ -8,10 +8,14 @@ using Antix.Http.Dispatcher;
 using Antix.Http.Filters;
 using Antix.Http.Filters.Logging;
 using Antix.Http.Filters.Response.Antix.Http.Filters.Response;
+using Antix.IO;
 using Antix.Logging;
 using Antix.NuGet.API.Packages;
-using Antix.NuGet.Application.Packages;
+using Antix.NuGet.Application.Packages.Models;
+using Antix.NuGet.Application.Packages.Storage;
+using Antix.NuGet.Packages.Models;
 using Antix.Services;
+using Castle.Facilities.TypedFactory;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using Newtonsoft.Json.Serialization;
@@ -24,6 +28,8 @@ namespace Antix.NuGet.Server.Configuration
             this IWindsorContainer container,
             HttpConfiguration configuration)
         {
+            container.AddFacility(new TypedFactoryFacility());
+
             RegisterLogging(container);
             RegisterServices(container);
 
@@ -38,7 +44,7 @@ namespace Antix.NuGet.Server.Configuration
             {
                 container.Register(
                     Component.For<Log.Delegate>()
-                        .Instance(Log.ToConsole)
+                        .Instance(Log.ToDebug)
                         .LifestyleSingleton()
                     );
             }
@@ -68,6 +74,17 @@ namespace Antix.NuGet.Server.Configuration
             IWindsorContainer container)
         {
             container.Register(
+                Component.For<IFileSystemChangeMonitor>()
+                    .ImplementedBy<FileSystemChangeMonitor>()
+                    .LifestyleTransient()
+                );
+            container.Register(
+                Component.For<IFileSystemPackageMetadataStore>()
+                    .ImplementedBy<FileSystemPackageMetadataStore>()
+                    .LifestyleSingleton()
+                );
+
+            container.Register(
                 Classes
                     .FromAssemblyContaining<Global>()
                     .BasedOn<IService>()
@@ -77,7 +94,15 @@ namespace Antix.NuGet.Server.Configuration
                 );
             container.Register(
                 Classes
-                    .FromAssemblyContaining<FileSystemPutPackageService>()
+                    .FromAssemblyContaining<Package>()
+                    .BasedOn<IService>()
+                    .WithServiceAllInterfaces()
+                    .WithServiceSelf()
+                    .LifestyleTransient()
+                );
+            container.Register(
+                Classes
+                    .FromAssemblyContaining<FileSystemPackageMetadata>()
                     .BasedOn<IService>()
                     .WithServiceAllInterfaces()
                     .WithServiceSelf()

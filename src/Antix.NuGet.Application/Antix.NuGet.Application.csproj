@@ -32,8 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.IO.Compression" />
-    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,8 +40,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Packages\FileSystemPutPackageService.cs" />
-    <Compile Include="Packages\FileSystemPutPackageServiceOptions.cs" />
-    <Compile Include="Packages\Models\FileSystemPackage.cs" />
+    <Compile Include="Packages\Storage\FileSystemPackageMetadataStore.cs" />
+    <Compile Include="Packages\Storage\IFileSystemPackageMetadataStore.cs" />
+    <Compile Include="Packages\Storage\IFileSystemPackageMetadataListProvider.cs" />
+    <Compile Include="Packages\Models\FileSystemPackageMetadata.cs" />
+    <Compile Include="Packages\Storage\IFileSystemStorageSettings.cs" />
+    <Compile Include="Packages\Storage\FileSystemStorageSettings.cs" />
+    <Compile Include="Packages\Storage\FileSystemStorageSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>FileSystemStorageSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +62,13 @@
       <Project>{B9EB61F3-E1A8-48DD-BE8D-337B4BB25F87}</Project>
       <Name>Antix</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Packages\Storage\FileSystemStorageSettings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>FileSystemStorageSettings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

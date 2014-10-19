@@ -64,6 +64,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Antix.NuGet.Application\Antix.NuGet.Application.csproj">
+      <Project>{2FA3AA00-9A59-49A2-B898-A46064B36FBD}</Project>
+      <Name>Antix.NuGet.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Antix.Nuget\Antix.NuGet.csproj">
       <Project>{D031D772-6C75-45CC-B96C-97B88BAC661D}</Project>
       <Name>Antix.NuGet</Name>
