@@ -1,0 +1,928 @@
+﻿<?xml version="1.0" encoding="utf-8"?><feed xml:base="https://www.nuget.org/api/v2/" xmlns="http://www.w3.org/2005/Atom" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+  <id>https://www.nuget.org/api/v2/Search</id>
+  <title type="text">Search</title>
+  <updated>2014-10-19T17:57:08Z</updated>
+  <link rel="self" title="Search" href="Search" />
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='Antix.Blackhole',Version='1.0.0.1-beta')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='Antix.Blackhole',Version='1.0.0.1-beta')" />
+    <title type="text">Antix.Blackhole</title>
+    <summary type="text"></summary>
+    <updated>2014-10-06T14:41:25Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='Antix.Blackhole',Version='1.0.0.1-beta')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/Antix.Blackhole/1.0.0.1-beta" />
+    <m:properties>
+      <d:Version>1.0.0.1-beta</d:Version>
+      <d:NormalizedVersion>1.0.0.1-beta</d:NormalizedVersion>
+      <d:Copyright>Too simple template engine</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2014-10-06T14:41:25.893</d:Created>
+      <d:Dependencies></d:Dependencies>
+      <d:Description>Antix Blackhole</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">496</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/Antix.Blackhole/1.0.0.1-beta</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/antix-blackhole/master/graphics/antix-blackhole-32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2014-10-06T14:41:25.893</d:Published>
+      <d:PackageHash>X8YCfSGaNcpMe9OzBC8pAG+9ErhlzHnaz6xiU5Z44pYfGhmjYuU6lboH4BwM2B5CgJksi76CytLw1Dl0Ua3sMg==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">8804</d:PackageSize>
+      <d:ProjectUrl>https://github.com/MrAntix/antix-blackhole/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/Antix.Blackhole/1.0.0.1-beta</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>templating placeholder replacement</d:Tags>
+      <d:Title>Antix Blackhole</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">9</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>https://raw.github.com/MrAntix/antix-blackhole/master/LICENCE.md</d:LicenseUrl>
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='Antix.Drawing.code',Version='6.0.0-b16')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='Antix.Drawing.code',Version='6.0.0-b16')" />
+    <title type="text">Antix.Drawing.code</title>
+    <summary type="text"></summary>
+    <updated>2014-08-17T21:18:57Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='Antix.Drawing.code',Version='6.0.0-b16')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/Antix.Drawing.code/6.0.0-b16" />
+    <m:properties>
+      <d:Version>6.0.0-b16</d:Version>
+      <d:NormalizedVersion>6.0.0-b16</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2013</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2014-08-17T16:58:55.447</d:Created>
+      <d:Dependencies></d:Dependencies>
+      <d:Description>Antix Drawing Common Code</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">263</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/Antix.Drawing.code/6.0.0-b16</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/antix/master/graphics/antix_32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2014-08-17T16:58:55.447</d:Published>
+      <d:PackageHash>uUa0+4jKMsOSnEQ98LO2JRdg6uedD+I9/Z7+4oP85p+g7HfhYizYxTZwGXmZP03irjtKbwuuVnUzQmsJEx7Mug==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">5418</d:PackageSize>
+      <d:ProjectUrl>https://github.com/MrAntix/antix/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/Antix.Drawing.code/6.0.0-b16</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>Common Code Drawing Resize Images Cropping Images</d:Tags>
+      <d:Title>Antix Drawing Code</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">8</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>https://raw.github.com/MrAntix/antix/master/LICENCE.md</d:LicenseUrl>
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='Antix.code',Version='6.0.0-b16')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='Antix.code',Version='6.0.0-b16')" />
+    <title type="text">Antix.code</title>
+    <summary type="text"></summary>
+    <updated>2014-08-23T12:50:17Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='Antix.code',Version='6.0.0-b16')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/Antix.code/6.0.0-b16" />
+    <m:properties>
+      <d:Version>6.0.0-b16</d:Version>
+      <d:NormalizedVersion>6.0.0-b16</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2013</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2014-08-17T16:57:51.657</d:Created>
+      <d:Dependencies></d:Dependencies>
+      <d:Description>Antix Common Code</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">764</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/Antix.code/6.0.0-b16</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/antix/master/graphics/antix_32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2014-08-17T16:57:51.657</d:Published>
+      <d:PackageHash>GnFumqfufScxGO6fBypPpUHTJGvrA3jws2aY2pZG3+1hmGuOIoDsiCxc/lO2JfvZLeta/s3atcOq+P4fNNgugw==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">6920</d:PackageSize>
+      <d:ProjectUrl>https://github.com/MrAntix/antix/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/Antix.code/6.0.0-b16</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>Common Code IO Logging Strings</d:Tags>
+      <d:Title>Antix Code</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">10</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>https://raw.github.com/MrAntix/antix/master/LICENCE.md</d:LicenseUrl>
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='Antix.Data.Static.code',Version='6.0.0-b16')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='Antix.Data.Static.code',Version='6.0.0-b16')" />
+    <title type="text">Antix.Data.Static.code</title>
+    <summary type="text"></summary>
+    <updated>2014-08-17T21:18:57Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='Antix.Data.Static.code',Version='6.0.0-b16')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/Antix.Data.Static.code/6.0.0-b16" />
+    <m:properties>
+      <d:Version>6.0.0-b16</d:Version>
+      <d:NormalizedVersion>6.0.0-b16</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2013</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2014-08-17T16:58:38.037</d:Created>
+      <d:Dependencies></d:Dependencies>
+      <d:Description>Antix Static Data Code</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">80</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/Antix.Data.Static.code/6.0.0-b16</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/antix/master/graphics/antix_32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2014-08-17T16:58:38.037</d:Published>
+      <d:PackageHash>+aomtrOjp3qeZzLL9UOjVjjhT4Mb0GSgtTWYJLqslztQM5U2r2ImdiGzKMBWaWcIe5fOoh8PeNPNAKaJWbphqg==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">5993</d:PackageSize>
+      <d:ProjectUrl>https://github.com/MrAntix/antix/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/Antix.Data.Static.code/6.0.0-b16</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>Static Data Code Phone numbers</d:Tags>
+      <d:Title>Antix Static Data Code</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">7</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>https://raw.github.com/MrAntix/antix/master/LICENCE.md</d:LicenseUrl>
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='Antix.Html.code',Version='6.0.0-b16')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='Antix.Html.code',Version='6.0.0-b16')" />
+    <title type="text">Antix.Html.code</title>
+    <summary type="text"></summary>
+    <updated>2014-08-23T12:45:17Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='Antix.Html.code',Version='6.0.0-b16')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/Antix.Html.code/6.0.0-b16" />
+    <m:properties>
+      <d:Version>6.0.0-b16</d:Version>
+      <d:NormalizedVersion>6.0.0-b16</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2013</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2014-08-17T16:59:10.127</d:Created>
+      <d:Dependencies>Antix.code:6.0.0-b16:</d:Dependencies>
+      <d:Description>Antix HTML Common Code</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">758</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/Antix.Html.code/6.0.0-b16</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/antix/master/graphics/antix_32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2014-08-17T16:59:10.127</d:Published>
+      <d:PackageHash>r7FNnZGCJb6Nkx3cR5QMJuvFZHb31aaJkxbj4UiF++5QqMcSrMjXvUioHeioVkM7iynhyutl/4/DohgWrrHMtA==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">11291</d:PackageSize>
+      <d:ProjectUrl>https://github.com/MrAntix/antix/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/Antix.Html.code/6.0.0-b16</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>Common Code Html Parsing</d:Tags>
+      <d:Title>Antix Html Code</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">8</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>https://raw.github.com/MrAntix/antix/master/LICENCE.md</d:LicenseUrl>
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='Antix.Http.code',Version='6.0.0-b16')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='Antix.Http.code',Version='6.0.0-b16')" />
+    <title type="text">Antix.Http.code</title>
+    <summary type="text"></summary>
+    <updated>2014-08-17T21:18:57Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='Antix.Http.code',Version='6.0.0-b16')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/Antix.Http.code/6.0.0-b16" />
+    <m:properties>
+      <d:Version>6.0.0-b16</d:Version>
+      <d:NormalizedVersion>6.0.0-b16</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2013</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2014-08-17T16:59:26.937</d:Created>
+      <d:Dependencies>Antix.code:6.0.0-b16:|Antix.Services.code:6.0.0-b16:|Microsoft.AspNet.WebApi.Client:5.1.2:|Microsoft.AspNet.WebApi.Core:5.1.2:|Newtonsoft.Json:4.5.11:</d:Dependencies>
+      <d:Description>Antix Common Http Code</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">30</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/Antix.Http.code/6.0.0-b16</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/antix/master/graphics/antix_32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2014-08-17T16:59:26.937</d:Published>
+      <d:PackageHash>zJsXyoJWvPv+rom6koQA8oWYf/5pK1RCbtXiBxEZmm0Pl46/8aRrdXI4hmtFwUZEmKgFMjnMVYNeBOwVY2Y0EA==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">7084</d:PackageSize>
+      <d:ProjectUrl>https://github.com/MrAntix/antix/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/Antix.Http.code/6.0.0-b16</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>Common Code Http</d:Tags>
+      <d:Title>Antix Http Code</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">9</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>https://raw.github.com/MrAntix/antix/master/LICENCE.md</d:LicenseUrl>
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='Antix.Services.code',Version='6.0.0-b16')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='Antix.Services.code',Version='6.0.0-b16')" />
+    <title type="text">Antix.Services.code</title>
+    <summary type="text"></summary>
+    <updated>2014-08-17T21:18:57Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='Antix.Services.code',Version='6.0.0-b16')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/Antix.Services.code/6.0.0-b16" />
+    <m:properties>
+      <d:Version>6.0.0-b16</d:Version>
+      <d:NormalizedVersion>6.0.0-b16</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2013</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2014-08-17T16:59:43.74</d:Created>
+      <d:Dependencies>Antix.code:6.0.0-b16:</d:Dependencies>
+      <d:Description>Antix Common Services Code</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">30</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/Antix.Services.code/6.0.0-b16</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/antix/master/graphics/antix_32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2014-08-17T16:59:43.74</d:Published>
+      <d:PackageHash>jh1XRUVehxGP1FsuxTznLAX4zSlUXqm6DNmf13fh40IepmuV12k5FJADpct1089z4MYqmI4DsRCgVHRutXVE0g==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">3960</d:PackageSize>
+      <d:ProjectUrl>https://github.com/MrAntix/antix/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/Antix.Services.code/6.0.0-b16</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>Common Code Services</d:Tags>
+      <d:Title>Antix Services Code</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">9</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>https://raw.github.com/MrAntix/antix/master/LICENCE.md</d:LicenseUrl>
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='Antix.Security.code',Version='6.0.0-b16')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='Antix.Security.code',Version='6.0.0-b16')" />
+    <title type="text">Antix.Security.code</title>
+    <summary type="text"></summary>
+    <updated>2014-08-17T21:18:57Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='Antix.Security.code',Version='6.0.0-b16')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/Antix.Security.code/6.0.0-b16" />
+    <m:properties>
+      <d:Version>6.0.0-b16</d:Version>
+      <d:NormalizedVersion>6.0.0-b16</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2013</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2014-08-17T17:00:16.463</d:Created>
+      <d:Dependencies>Antix.code:6.0.0-b16:</d:Dependencies>
+      <d:Description>Antix Common Security Code</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">31</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/Antix.Security.code/6.0.0-b16</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/antix/master/graphics/antix_32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2014-08-17T17:00:16.463</d:Published>
+      <d:PackageHash>OQlGz99xuJ/QB3w7i56GoK2fhjigwFFxpJsFPaOgKNSv3v0F03QSjf9/W6FrhxmN8KST/2W8ICMjoGa9r48gWw==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">4915</d:PackageSize>
+      <d:ProjectUrl>https://github.com/MrAntix/antix/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/Antix.Security.code/6.0.0-b16</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>Common Code Security</d:Tags>
+      <d:Title>Antix Security Code</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">10</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>https://raw.github.com/MrAntix/antix/master/LICENCE.md</d:LicenseUrl>
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='Antix.Web.code',Version='6.0.0-b15')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='Antix.Web.code',Version='6.0.0-b15')" />
+    <title type="text">Antix.Web.code</title>
+    <summary type="text"></summary>
+    <updated>2014-08-17T21:18:57Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='Antix.Web.code',Version='6.0.0-b15')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/Antix.Web.code/6.0.0-b15" />
+    <m:properties>
+      <d:Version>6.0.0-b15</d:Version>
+      <d:NormalizedVersion>6.0.0-b15</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2013</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2014-08-17T16:53:23.077</d:Created>
+      <d:Dependencies>Antix.code:6.0.0-b15:</d:Dependencies>
+      <d:Description>Antix Web Common Code</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">181</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/Antix.Web.code/6.0.0-b15</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/antix/master/graphics/antix_32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2014-08-17T16:53:23.077</d:Published>
+      <d:PackageHash>E03MvkFDLvnkt9ZXHDohnTlnjfEJ325WeL5JOhWlUjIbQaozYCoEHq4qJVgZCAiRFSCRoTAIhoix7UzpPbQxSA==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">4762</d:PackageSize>
+      <d:ProjectUrl>https://github.com/MrAntix/antix/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/Antix.Web.code/6.0.0-b15</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>Common Code Web</d:Tags>
+      <d:Title>Antix Web Code</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">7</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>https://raw.github.com/MrAntix/antix/master/LICENCE.md</d:LicenseUrl>
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='Antix.Services.ActionCache.code',Version='6.0.0-b16')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='Antix.Services.ActionCache.code',Version='6.0.0-b16')" />
+    <title type="text">Antix.Services.ActionCache.code</title>
+    <summary type="text"></summary>
+    <updated>2014-08-17T21:18:57Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='Antix.Services.ActionCache.code',Version='6.0.0-b16')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/Antix.Services.ActionCache.code/6.0.0-b16" />
+    <m:properties>
+      <d:Version>6.0.0-b16</d:Version>
+      <d:NormalizedVersion>6.0.0-b16</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2013</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2014-08-17T16:59:59.617</d:Created>
+      <d:Dependencies>Antix.code:6.0.0-b16:|Antix.Services.code:6.0.0-b16:</d:Dependencies>
+      <d:Description>Antix Common Services Code - Action Cache</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">9</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/Antix.Services.ActionCache.code/6.0.0-b16</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/antix/master/graphics/antix_32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2014-08-17T16:59:59.617</d:Published>
+      <d:PackageHash>jhX4pQS656OwUYUwY0NOM8RcTbSZv0cLmGCWf1QNdxgdzZsGGGQpbazXeM/YAiKg2OsMSYklhfICalcs/QFizw==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">8009</d:PackageSize>
+      <d:ProjectUrl>https://github.com/MrAntix/antix/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/Antix.Services.ActionCache.code/6.0.0-b16</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>Common Code Services Action Cache</d:Tags>
+      <d:Title>Antix Action Cache Code</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">9</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>https://raw.github.com/MrAntix/antix/master/LICENCE.md</d:LicenseUrl>
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='Antix.Data.Keywords.code',Version='6.0.0-b16')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='Antix.Data.Keywords.code',Version='6.0.0-b16')" />
+    <title type="text">Antix.Data.Keywords.code</title>
+    <summary type="text"></summary>
+    <updated>2014-08-17T21:18:57Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='Antix.Data.Keywords.code',Version='6.0.0-b16')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/Antix.Data.Keywords.code/6.0.0-b16" />
+    <m:properties>
+      <d:Version>6.0.0-b16</d:Version>
+      <d:NormalizedVersion>6.0.0-b16</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2013</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2014-08-17T16:58:07.083</d:Created>
+      <d:Dependencies>Antix.code:6.0.0-b16:</d:Dependencies>
+      <d:Description>A keyword indexing framework</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">106</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/Antix.Data.Keywords.code/6.0.0-b16</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/antix/master/graphics/antix_32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2014-08-17T16:58:07.083</d:Published>
+      <d:PackageHash>UQgp1mVJhD6Aepaj+VEoNEiGQxc1njDqSLnkVRLKHoHkxJAvj0ookrBnzcpziKqadtKcw1PH1NoJndVElBnPpQ==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">17363</d:PackageSize>
+      <d:ProjectUrl>https://github.com/MrAntix/antix/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/Antix.Data.Keywords.code/6.0.0-b16</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>Keyword indexing</d:Tags>
+      <d:Title>Antix Data Keywords Code</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">7</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>https://raw.github.com/MrAntix/antix/master/LICENCE.md</d:LicenseUrl>
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='Antix.Data.Keywords.EF.code',Version='6.0.0-b16')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='Antix.Data.Keywords.EF.code',Version='6.0.0-b16')" />
+    <title type="text">Antix.Data.Keywords.EF.code</title>
+    <summary type="text"></summary>
+    <updated>2014-08-17T21:18:57Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='Antix.Data.Keywords.EF.code',Version='6.0.0-b16')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/Antix.Data.Keywords.EF.code/6.0.0-b16" />
+    <m:properties>
+      <d:Version>6.0.0-b16</d:Version>
+      <d:NormalizedVersion>6.0.0-b16</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2013</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2014-08-17T16:58:22.983</d:Created>
+      <d:Dependencies>Antix.code:6.0.0-b16:|Antix.Data.Keywords.code:6.0.0-b16:|EntityFramework:5.0.0:</d:Dependencies>
+      <d:Description>A keyword indexing framework for Entity Frameword</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">98</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/Antix.Data.Keywords.EF.code/6.0.0-b16</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/antix/master/graphics/antix_32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2014-08-17T16:58:22.983</d:Published>
+      <d:PackageHash>zIAGip4xGhanMZdWRprvvS+HD8lwODuZZTWiw8rbfCxxh+vUFN5DgDZuXHQfCXXOS+i8czrBOpTE/eX03NznrQ==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">6723</d:PackageSize>
+      <d:ProjectUrl>https://github.com/MrAntix/antix/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/Antix.Data.Keywords.EF.code/6.0.0-b16</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>Keyword indexing EntityFramework</d:Tags>
+      <d:Title>Antix Data Keywords EF Code</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">7</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>https://raw.github.com/MrAntix/antix/master/LICENCE.md</d:LicenseUrl>
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='Antix.PasswordStrength.angularjs',Version='1.0.0.3-beta')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='Antix.PasswordStrength.angularjs',Version='1.0.0.3-beta')" />
+    <title type="text">Antix.PasswordStrength.angularjs</title>
+    <summary type="text"></summary>
+    <updated>2014-10-08T18:56:57Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='Antix.PasswordStrength.angularjs',Version='1.0.0.3-beta')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/Antix.PasswordStrength.angularjs/1.0.0.3-beta" />
+    <m:properties>
+      <d:Version>1.0.0.3-beta</d:Version>
+      <d:NormalizedVersion>1.0.0.3-beta</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2013</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2014-10-08T18:56:57.89</d:Created>
+      <d:Dependencies>angularjs:1.2.24:</d:Dependencies>
+      <d:Description>Checks the strength of a password</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">32</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/Antix.PasswordStrength.angularjs/1.0.0.3-beta</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/antix/master/graphics/antix_32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2014-10-08T18:56:57.89</d:Published>
+      <d:PackageHash>9DqlhHimpaS7Zt2Beg14zNivTK0YhRid3nxmwvduvxu+AfsB68ql5UuWqpJFdC9pvFnF821rNalnGn3lUWDI6g==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">4585</d:PackageSize>
+      <d:ProjectUrl>https://github.com/MrAntix/antix/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/Antix.PasswordStrength.angularjs/1.0.0.3-beta</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>AngularJS password strength</d:Tags>
+      <d:Title>Antix.PasswordStrength for AngularJS</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">9</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>https://raw.github.com/MrAntix/antix/master/LICENCE.md</d:LicenseUrl>
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='Antix.Status.angularjs',Version='1.0.0-b001')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='Antix.Status.angularjs',Version='1.0.0-b001')" />
+    <title type="text">Antix.Status.angularjs</title>
+    <summary type="text"></summary>
+    <updated>2014-10-10T11:24:28Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='Antix.Status.angularjs',Version='1.0.0-b001')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/Antix.Status.angularjs/1.0.0-b001" />
+    <m:properties>
+      <d:Version>1.0.0-b001</d:Version>
+      <d:NormalizedVersion>1.0.0-b001</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2013</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2014-10-10T11:24:28.387</d:Created>
+      <d:Dependencies>angularjs:1.2.24:</d:Dependencies>
+      <d:Description>A status spinner/message directive</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">6</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/Antix.Status.angularjs/1.0.0-b001</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/antix/master/graphics/antix_32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2014-10-10T11:24:28.387</d:Published>
+      <d:PackageHash>LlUNIpge4Izm+o+gHNR48wugU2/56TZ20HJQRYjk2wqqGHISAFDMy7Kks5Qy8culDhg1+kMsVA+f21f9AZI3BQ==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">4708</d:PackageSize>
+      <d:ProjectUrl>https://github.com/MrAntix/antix/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/Antix.Status.angularjs/1.0.0-b001</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>AngularJS status spinner</d:Tags>
+      <d:Title>Antix.Status for AngularJS</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">6</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>https://raw.github.com/MrAntix/antix/master/LICENCE.md</d:LicenseUrl>
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='antix-mapping',Version='1.0.0-b06')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='antix-mapping',Version='1.0.0-b06')" />
+    <title type="text">antix-mapping</title>
+    <summary type="text"></summary>
+    <updated>2014-06-28T01:44:07Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='antix-mapping',Version='1.0.0-b06')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/antix-mapping/1.0.0-b06" />
+    <m:properties>
+      <d:Version>1.0.0-b06</d:Version>
+      <d:NormalizedVersion>1.0.0-b06</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2012</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2012-10-12T19:40:37.947</d:Created>
+      <d:Dependencies></d:Dependencies>
+      <d:Description>A container for DRY object mapping</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">338</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/antix-mapping/1.0.0-b06</d:GalleryDetailsUrl>
+      <d:IconUrl>https://github.com/MrAntix/Mapping/raw/master/Graphics/antix-mapping128x128.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2012-10-12T19:40:37.947</d:Published>
+      <d:PackageHash>IhJQMlq39ZDfEi0T75QX2pQtQgCXTDwNZW2hjOGUTiyrjU2LNI8Xm0UHYwyrEEcKnh/e6cXEoJRQ8wAkVFsorw==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">29053</d:PackageSize>
+      <d:ProjectUrl>http://mrantix.github.com/Mapping</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/antix-mapping/1.0.0-b06</d:ReportAbuseUrl>
+      <d:ReleaseNotes>Refactored to use a context object for create, delete and update delegates</d:ReleaseNotes>
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags xml:space="preserve"> Mapping </d:Tags>
+      <d:Title>Mapping</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">192</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl m:null="true" />
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='antix-testing',Version='4.0.0-b01')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='antix-testing',Version='4.0.0-b01')" />
+    <title type="text">antix-testing</title>
+    <summary type="text"></summary>
+    <updated>2014-08-21T19:42:54Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='antix-testing',Version='4.0.0-b01')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/antix-testing/4.0.0-b01" />
+    <m:properties>
+      <d:Version>4.0.0-b01</d:Version>
+      <d:NormalizedVersion>4.0.0-b01</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2012</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2013-05-14T22:55:19.717</d:Created>
+      <d:Dependencies></d:Dependencies>
+      <d:Description>
+        Testing helpers, incl..
+        Generic Builder to delegate instance creation for testing data using Mocks, Pocos or whatever
+        Resource Finder, simplify getting hold of embedded resources in your tests
+        Benchmark, time how long your code takes, run iterations or time-to-stop benchmarks
+      </d:Description>
+      <d:DownloadCount m:type="Edm.Int32">4594</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/antix-testing/4.0.0-b01</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/Testing/dde31964172bf39ddccd33bb9c3aee1755407a49/Graphics/antix-testing128x128.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2013-05-14T22:55:19.717</d:Published>
+      <d:PackageHash>Yq33h72Go27JhW1NgIcUAIJdkRRTQxzx4XYPP51co8MRjzRl9m1QxCGde/auVeeql54FmodysxqZ9B111xY3zg==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">74660</d:PackageSize>
+      <d:ProjectUrl>http://mrantix.github.com/Testing</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/antix-testing/4.0.0-b01</d:ReportAbuseUrl>
+      <d:ReleaseNotes>
+        ## 4.0.0-b01
+        Changed IBenchmark to include a label, which allows results to be labelled
+        Introduced extensions to provide backward compatable method calls, but if IBenchmark was implemented this is going to break stuff so bumped to v4
+      </d:ReleaseNotes>
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>Testing Builder</d:Tags>
+      <d:Title>Testing</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">286</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl m:null="true" />
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='antix-nibbler',Version='2.0.0')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='antix-nibbler',Version='2.0.0')" />
+    <title type="text">antix-nibbler</title>
+    <summary type="text"></summary>
+    <updated>2014-08-24T09:58:56Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='antix-nibbler',Version='2.0.0')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/antix-nibbler/2.0.0" />
+    <m:properties>
+      <d:Version>2.0.0</d:Version>
+      <d:NormalizedVersion>2.0.0</d:NormalizedVersion>
+      <d:Copyright m:null="true" />
+      <d:Created m:type="Edm.DateTime">2013-07-01T14:50:50.083</d:Created>
+      <d:Dependencies></d:Dependencies>
+      <d:Description>
+        Compress JS, CSS and optimise PNG files in your Web project on Publish.
+
+        Combine JS and CSS into single files and remove references from your layout pages.
+
+        Uses YUI Compressor for .Net http://yuicompressor.codeplex.com/ for JS and CSS
+        and PNGOUT.EXE http://advsys.net/ken/utils.htm for PNG compression.
+      </d:Description>
+      <d:DownloadCount m:type="Edm.Int32">2193</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/antix-nibbler/2.0.0</d:GalleryDetailsUrl>
+      <d:IconUrl>http://antix.co.uk/content/projects/nibbler/Identity-32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">true</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language>en-GB</d:Language>
+      <d:Published m:type="Edm.DateTime">2013-07-01T14:50:50.083</d:Published>
+      <d:PackageHash>GC/W07/uBauYUDE46UWh2dh68WwDXLsTT0o7aKrsp9kkjsq63wtLbzWmfhg6jD6j0vcxIpheNFaq6N7KEw4O0g==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">227917</d:PackageSize>
+      <d:ProjectUrl>http://antix.co.uk/projects/nibbler</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/antix-nibbler/2.0.0</d:ReportAbuseUrl>
+      <d:ReleaseNotes>
+        2.0.0 new version of the YuiCompressor, changes to Css compression type break compatibility
+        http://yuicompressor.codeplex.com/workitem/9870
+      </d:ReleaseNotes>
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Tags>publish js css png compress compression compact pack package</d:Tags>
+      <d:Title>Nibbler</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">227</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl m:null="true" />
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='antix-building',Version='1.1.0-b01')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='antix-building',Version='1.1.0-b01')" />
+    <title type="text">antix-building</title>
+    <summary type="text"></summary>
+    <updated>2014-07-28T14:19:11Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='antix-building',Version='1.1.0-b01')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/antix-building/1.1.0-b01" />
+    <m:properties>
+      <d:Version>1.1.0-b01</d:Version>
+      <d:NormalizedVersion>1.1.0-b01</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2013</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2013-10-22T12:06:01.09</d:Created>
+      <d:Dependencies></d:Dependencies>
+      <d:Description>
+        This is a generic builder class which separates off the business of creation into a reusable component.
+
+        Its a quick step to get into the builder pattern which is useful for building loads of things,
+        hierarchical things, fluent interfaces for configuring things and all that.
+      </d:Description>
+      <d:DownloadCount m:type="Edm.Int32">660</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/antix-building/1.1.0-b01</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/Building/master/graphics/antix-building128x128.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">false</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2013-10-22T12:06:01.09</d:Published>
+      <d:PackageHash>5/vtlp1ygDFy5jJRjBpKGsjbDD7OLxUKACh2oc1zwi9dRiFMlkXYgxLk7WJ0/7+m8b1ctDplBBANuruPDtBKDg==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">7838</d:PackageSize>
+      <d:ProjectUrl>http://mrantix.github.com/Building</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/antix-building/1.1.0-b01</d:ReportAbuseUrl>
+      <d:ReleaseNotes>see https://github.com/MrAntix/Building/blob/master/ReleaseNotes.md</d:ReleaseNotes>
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>Builder Pattern</d:Tags>
+      <d:Title>Building</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">265</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl m:null="true" />
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='antix.imageUploadPreview.jquery',Version='1.0.0.1')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='antix.imageUploadPreview.jquery',Version='1.0.0.1')" />
+    <title type="text">antix.imageUploadPreview.jquery</title>
+    <summary type="text"></summary>
+    <updated>2014-10-01T10:33:55Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='antix.imageUploadPreview.jquery',Version='1.0.0.1')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/antix.imageUploadPreview.jquery/1.0.0.1" />
+    <m:properties>
+      <d:Version>1.0.0.1</d:Version>
+      <d:NormalizedVersion>1.0.0.1</d:NormalizedVersion>
+      <d:Copyright>Copyright Antix Software Limited 2013</d:Copyright>
+      <d:Created m:type="Edm.DateTime">2014-10-01T10:33:55.607</d:Created>
+      <d:Dependencies>jquery:1.7.1.1:</d:Dependencies>
+      <d:Description>Shows a preview of the image you are about to upload</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">60</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/antix.imageUploadPreview.jquery/1.0.0.1</d:GalleryDetailsUrl>
+      <d:IconUrl>https://raw.github.com/MrAntix/antix/master/graphics/antix_32x32.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">true</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2014-10-01T10:33:55.607</d:Published>
+      <d:PackageHash>NS17tVBAC2dJ8Wxc0XiRnH2Bi4h+Tewtzee1oGslbdAU/ozcWCzYzGaqh5lPFp9RKSmSMt3gYCWd6IX1Gr9t/A==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">3729</d:PackageSize>
+      <d:ProjectUrl>https://github.com/MrAntix/antix/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/antix.imageUploadPreview.jquery/1.0.0.1</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Summary m:null="true" />
+      <d:Tags>jQuery Image Preview JS</d:Tags>
+      <d:Title>Image Upload Preview for jQuery</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">46</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>https://raw.github.com/MrAntix/antix/master/LICENCE.md</d:LicenseUrl>
+      <d:LicenseNames m:null="true" />
+      <d:LicenseReportUrl m:null="true" />
+    </m:properties>
+  </entry>
+  <entry>
+    <id>https://www.nuget.org/api/v2/Packages(Id='smtp-impostor',Version='2.0.8')</id>
+    <category term="NuGetGallery.V2FeedPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <link rel="edit" title="V2FeedPackage" href="Packages(Id='smtp-impostor',Version='2.0.8')" />
+    <title type="text">smtp-impostor</title>
+    <summary type="text">A testable fake SMTP server</summary>
+    <updated>2014-08-26T15:22:36Z</updated>
+    <author>
+      <name>Anthony Johnston</name>
+    </author>
+    <link rel="edit-media" title="V2FeedPackage" href="Packages(Id='smtp-impostor',Version='2.0.8')/$value" />
+    <content type="application/zip" src="https://www.nuget.org/api/v2/package/smtp-impostor/2.0.8" />
+    <m:properties>
+      <d:Version>2.0.8</d:Version>
+      <d:NormalizedVersion>2.0.8</d:NormalizedVersion>
+      <d:Copyright m:null="true" />
+      <d:Created m:type="Edm.DateTime">2011-03-19T23:22:58.673</d:Created>
+      <d:Dependencies></d:Dependencies>
+      <d:Description>A testable fake SMTP server</d:Description>
+      <d:DownloadCount m:type="Edm.Int32">968</d:DownloadCount>
+      <d:GalleryDetailsUrl>https://www.nuget.org/packages/smtp-impostor/2.0.8</d:GalleryDetailsUrl>
+      <d:IconUrl>https://nugetgallery.blob.core.windows.net/icons/smtp-impostor.2.0.8.png</d:IconUrl>
+      <d:IsLatestVersion m:type="Edm.Boolean">true</d:IsLatestVersion>
+      <d:IsAbsoluteLatestVersion m:type="Edm.Boolean">true</d:IsAbsoluteLatestVersion>
+      <d:IsPrerelease m:type="Edm.Boolean">false</d:IsPrerelease>
+      <d:Language m:null="true" />
+      <d:Published m:type="Edm.DateTime">2011-03-19T23:23:17.04</d:Published>
+      <d:PackageHash>m0q2iBpVJYkBr92dHKaNgHoOQtfAfQocnVQPQlttF+UEiCR/NS5S1VTBCwkV6FJi1auImIFTLTbrt6nguU+eLg==</d:PackageHash>
+      <d:PackageHashAlgorithm>SHA512</d:PackageHashAlgorithm>
+      <d:PackageSize m:type="Edm.Int64">46389</d:PackageSize>
+      <d:ProjectUrl>http://ssfd.codeplex.com/</d:ProjectUrl>
+      <d:ReportAbuseUrl>https://www.nuget.org/package/ReportAbuse/smtp-impostor/2.0.8</d:ReportAbuseUrl>
+      <d:ReleaseNotes m:null="true" />
+      <d:RequireLicenseAcceptance m:type="Edm.Boolean">false</d:RequireLicenseAcceptance>
+      <d:Tags>smtp testing .net40</d:Tags>
+      <d:Title>smtp-impostor</d:Title>
+      <d:VersionDownloadCount m:type="Edm.Int32">968</d:VersionDownloadCount>
+      <d:MinClientVersion m:null="true" />
+      <d:LastEdited m:type="Edm.DateTime" m:null="true" />
+      <d:LicenseUrl>http://ssfd.codeplex.com/license</d:LicenseUrl>
+      <d:LicenseNames>BSD</d:LicenseNames>
+      <d:LicenseReportUrl></d:LicenseReportUrl>
+    </m:properties>
+  </entry>
+</feed>
