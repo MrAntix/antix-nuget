@@ -5,5 +5,6 @@
         string Id { get; }
         string Version { get; }
         string Title { get; }
+        string Summary { get; }
     }
 }

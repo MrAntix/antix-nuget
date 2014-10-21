@@ -64,6 +64,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -95,6 +96,18 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
+    <Content Include="App_Data\packages\Antix\code\Antix.code.1.0.nupkg" />
+    <Content Include="App_Data\packages\Antix\Data\Keywords\code\Antix.Data.Keywords.code.1.0.nupkg" />
+    <Content Include="App_Data\packages\Antix\Data\Keywords\EF\code\Antix.Data.Keywords.EF.code.1.0.nupkg" />
+    <Content Include="App_Data\packages\Antix\Data\Static\code\Antix.Data.Static.code.1.0.nupkg" />
+    <Content Include="App_Data\packages\Antix\Drawing\code\Antix.Drawing.code.1.0.nupkg" />
+    <Content Include="App_Data\packages\Antix\Html\code\Antix.Html.code.1.0.nupkg" />
+    <Content Include="App_Data\packages\Antix\Http\code\Antix.Http.code.1.0.nupkg" />
+    <Content Include="App_Data\packages\Antix\Security\code\Antix.Security.code.1.0.nupkg" />
+    <Content Include="App_Data\packages\Antix\Services\ActionCache\code\Antix.Services.ActionCache.code.1.0.nupkg" />
+    <Content Include="App_Data\packages\Antix\Services\code\Antix.Services.code.1.0.nupkg" />
+    <Content Include="App_Data\packages\Antix\Web\code\Antix.Web.code.1.0.nupkg" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -107,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\Startup.cs" />
+    <Compile Include="Configuration\SyndicationFeedFormatter.cs" />
     <Compile Include="Configuration\WindsorConfig.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -131,9 +145,7 @@
       <Name>Antix</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

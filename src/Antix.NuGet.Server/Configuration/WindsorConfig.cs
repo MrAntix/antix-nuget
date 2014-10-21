@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Net;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Dispatcher;
@@ -7,7 +8,6 @@ using System.Web.Http.Filters;
 using Antix.Http.Dispatcher;
 using Antix.Http.Filters;
 using Antix.Http.Filters.Logging;
-using Antix.Http.Filters.Response.Antix.Http.Filters.Response;
 using Antix.IO;
 using Antix.Logging;
 using Antix.NuGet.API.Packages;
@@ -155,10 +155,13 @@ namespace Antix.NuGet.Server.Configuration
 
             configuration.Formatters.Clear();
             configuration.Formatters.Add(formatter);
+            configuration.Formatters.Add(new SyndicationFeedFormatter());
+
+            //configuration.Filters.Add(new ResponseGlobalFilter());
+
+            configuration.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
 
             configuration.EnsureInitialized();
-
-            configuration.Filters.Add(new ResponseGlobalFilter());
         }
     }
 }

@@ -11,6 +11,7 @@ namespace Antix.NuGet.Application.Packages.Models
         readonly string _id;
         readonly string _version;
         readonly string _title;
+        readonly string _summary;
 
         public FileSystemPackageMetadata(
             string path,
@@ -20,6 +21,7 @@ namespace Antix.NuGet.Application.Packages.Models
             _id = package.metadata.id;
             _version = package.metadata.version;
             _title = package.metadata.title;
+            _summary = package.metadata.summary;
         }
 
         public string Path
@@ -40,6 +42,11 @@ namespace Antix.NuGet.Application.Packages.Models
         public string Title
         {
             get { return _title; }
+        }
+
+        public string Summary
+        {
+            get { return _summary; }
         }
 
         public bool IsEmpty()
