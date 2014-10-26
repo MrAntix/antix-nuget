@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Net;
+using System.ServiceModel.Syndication;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Dispatcher;
@@ -120,7 +121,7 @@ namespace Antix.NuGet.Server.Configuration
                     .LifestyleTransient()
                 );
             container.Register(
-                Classes.FromAssemblyContaining<PackagesController>()
+                Classes.FromAssemblyContaining<PackagesFeedController>()
                     .BasedOn<ApiController>()
                     .LifestyleTransient()
                 );
@@ -155,7 +156,8 @@ namespace Antix.NuGet.Server.Configuration
 
             configuration.Formatters.Clear();
             configuration.Formatters.Add(formatter);
-            configuration.Formatters.Add(new SyndicationFeedFormatter());
+            configuration.Formatters.Add(new PackageFeedFormatter());
+            configuration.Formatters.Add(new PackageEntryFormatter());
 
             //configuration.Filters.Add(new ResponseGlobalFilter());
 

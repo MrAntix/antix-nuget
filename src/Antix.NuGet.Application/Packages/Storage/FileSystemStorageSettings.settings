@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="RootDirectory" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">~\app_data\packages</Value>
+      <Value Profile="(Default)">~\content\packages</Value>
     </Setting>
   </Settings>
 </SettingsFile>

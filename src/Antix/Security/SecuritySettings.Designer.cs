@@ -8,16 +8,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Antix.NuGet.Application.Packages.Storage {
+namespace Antix.Security {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
-    public sealed partial class FileSystemStorageSettings : global::System.Configuration.ApplicationSettingsBase {
+    public sealed partial class SecuritySettings : global::System.Configuration.ApplicationSettingsBase {
         
-        private static FileSystemStorageSettings defaultInstance = ((FileSystemStorageSettings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new FileSystemStorageSettings())));
+        private static SecuritySettings defaultInstance = ((SecuritySettings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new SecuritySettings())));
         
-        public static FileSystemStorageSettings Default {
+        public static SecuritySettings Default {
             get {
                 return defaultInstance;
             }
@@ -25,10 +25,10 @@ namespace Antix.NuGet.Application.Packages.Storage {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("~\\content\\packages")]
-        public string RootDirectory {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SecurityHashSalt {
             get {
-                return ((string)(this["RootDirectory"]));
+                return ((string)(this["SecurityHashSalt"]));
             }
         }
     }

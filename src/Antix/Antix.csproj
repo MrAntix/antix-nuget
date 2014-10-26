@@ -78,6 +78,13 @@
     <Compile Include="Logging\Log.Event.cs" />
     <Compile Include="Logging\Log.Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\IHashService.cs" />
+    <Compile Include="Security\MD5HashService.cs" />
+    <Compile Include="Security\SecuritySettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>SecuritySettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Services\IService.cs" />
     <Compile Include="Services\IServiceHandler.cs" />
     <Compile Include="Services\Models\Response.cs" />
@@ -91,6 +98,10 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Security\SecuritySettings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>SecuritySettings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

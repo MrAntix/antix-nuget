@@ -91,7 +91,12 @@
       <Name>Antix</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Packages\Resources\metadata.xml">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </Content>
+    <None Include="Resources\Metadata.txt" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Packages\XmlResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

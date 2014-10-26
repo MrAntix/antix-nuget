@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using Antix.IO;
 using Antix.Logging;
@@ -16,6 +17,7 @@ namespace Antix.NuGet.Application.Packages.Storage
     {
         readonly Log.Delegate _log;
         readonly IPackageReader _packageReader;
+        readonly MD5CryptoServiceProvider _hashService = new MD5CryptoServiceProvider();
 
         readonly IList<FileSystemPackageMetadata> _items;
 
@@ -73,10 +75,22 @@ namespace Antix.NuGet.Application.Packages.Storage
 
             Remove(path);
 
+            var info = new FileInfo(path);
+            string hash64;
+
+            using (var stream = info.OpenRead())
+            {
+                var hash = _hashService.ComputeHash(stream);
+                hash64 = Convert.ToBase64String(hash);
+            }
+
             var packageMetadata = new FileSystemPackageMetadata(
-                path,
-                _packageReader.ExecuteAsync(path).Result
+                path, 
+                _packageReader.ExecuteAsync(path).Result,
+                new DateTimeOffset(info.CreationTimeUtc),
+                hash64
                 );
+
 
             _log.Debug(
                 m => m("Adding package {0} version {1}",
