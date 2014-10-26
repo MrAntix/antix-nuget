@@ -37,7 +37,7 @@ namespace Antix.NuGet.Server.Configuration
             var item = new SyndicationItem
             {
                 Id = string.Format("{0}/{1}", rootUrl, packageRef),
-                Title = new TextSyndicationContent(package.Title),
+                Title = new TextSyndicationContent(package.Id),
                 Summary = new TextSyndicationContent(package.Summary),
                 Content = new UrlSyndicationContent(
                     new Uri(
@@ -47,6 +47,17 @@ namespace Antix.NuGet.Server.Configuration
                             package.Version)),
                     "application/zip")
             };
+
+            item.Authors.Add(new SyndicationPerson
+            {
+                Name = "Anthony Johnston"
+            });
+
+            item.Categories.Add(new SyndicationCategory
+            {
+                Name = "NuGetGallery.V2FeedPackage",
+                Scheme = "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+            });
 
             item.Links.Add(new SyndicationLink
             {
@@ -66,33 +77,80 @@ namespace Antix.NuGet.Server.Configuration
 
             var properties = new XElement(XName.Get("properties", M_NS));
 
-            properties.Add(new XElement(XName.Get("Version", D_NS), package.Version));
-            properties.Add(new XElement(XName.Get("NormalizedVersion", D_NS), package.Version));
+            properties.Add(GetString("Version", package.Version));
+            properties.Add(GetString("NormalizedVersion", package.Version));
 
-            properties.Add(new XElement(XName.Get("Copyright", D_NS), "Copyright"));
-            properties.Add(new XElement(XName.Get("Created", D_NS), package.Created));
-            properties.Add(new XElement(XName.Get("Dependencies", D_NS)));
-            properties.Add(new XElement(XName.Get("Description", D_NS), "Description"));
+            properties.Add(GetString("Copyright", package.Copyright));
+            properties.Add(GetDate("Created", package.Created));
+            properties.Add(GetString("Dependencies", package.Dependencies));
+            properties.Add(GetString("Description", package.Description));
+            properties.Add(GetString("Summary", package.Summary));
+            properties.Add(GetString("ReleaseNotes", package.ReleaseNotes));
 
-            properties.Add(new XElement(XName.Get("IsLatestVersion", D_NS), "true"));
-            properties.Add(new XElement(XName.Get("IsAbsoluteLatestVersion", D_NS), "false"));
-            properties.Add(new XElement(XName.Get("IsPrerelease", D_NS), "false"));
+            properties.Add(GetBool("IsLatestVersion", true));
+            properties.Add(GetBool("IsAbsoluteLatestVersion", false));
+            properties.Add(GetBool("IsPrerelease", false));
 
-            properties.Add(new XElement(XName.Get("Published", D_NS), package.Created));
+            properties.Add(GetDate("Published", package.Created));
 
-            properties.Add(new XElement(XName.Get("Title", D_NS), package.Title));
+            properties.Add(GetString("Title", package.Title));
 
-            properties.Add(new XElement(XName.Get("LicenseUrl", D_NS), "http://antix.co.uk"));
-            properties.Add(new XElement(XName.Get("ProjectUrl", D_NS), "http://antix.co.uk"));
-            properties.Add(new XElement(XName.Get("Tags", D_NS), "Tags"));
+            properties.Add(GetString("LicenseUrl", "http://antix.co.uk"));
+            properties.Add(GetString("ProjectUrl", "http://antix.co.uk"));
+            properties.Add(GetString("Tags", package.Tags));
 
-           // properties.Add(new XElement(XName.Get("DownloadCount", D_NS), ""));
-            properties.Add(new XElement(XName.Get("GalleryDetailsUrl", D_NS), ""));
-            properties.Add(new XElement(XName.Get("IconUrl", D_NS), ""));
+            // properties.Add(GetString("DownloadCount", ""));
+            properties.Add(GetString("GalleryDetailsUrl", ""));
+            properties.Add(GetString("IconUrl", ""));
+
+            //properties.Add(GetString("PackageHash", package.MD5Hash));
+            //properties.Add(GetString("PackageHashAlgorithm", "MD5"));
+
+            properties.Add(Get("Language"));
+            properties.Add(Get("MinClientVersion"));
+            properties.Add(Get("LastEdited"));
+            properties.Add(Get("LicenseNames"));
+            properties.Add(Get("LicenseReportUrl"));
+
 
             item.ElementExtensions.Add(properties);
 
             return item;
         }
+
+        static XElement Get(string name)
+        {
+            return new XElement(
+                XName.Get(name, D_NS),
+                new XAttribute(XName.Get("null", M_NS), true)
+                );
+        }
+
+        static XElement GetString(string name, string value)
+        {
+            return new XElement(
+                XName.Get(name, D_NS),
+                value
+                );
+        }
+
+        static XElement GetBool(string name, bool value)
+        {
+            return new XElement(
+                XName.Get(name, D_NS),
+                new XAttribute(XName.Get("type", M_NS), "Edm.Boolean"),
+                value
+                );
+        }
+
+        static XElement GetDate(string name, DateTimeOffset value)
+        {
+            return new XElement(
+                XName.Get(name, D_NS),
+                new XAttribute(XName.Get("type", M_NS), "Edm.DateTime"),
+                value
+                );
+        }
+
     }
 }

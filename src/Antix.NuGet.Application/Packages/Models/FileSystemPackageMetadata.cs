@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Antix.NuGet.Packages.Models;
 
 namespace Antix.NuGet.Application.Packages.Models
@@ -17,10 +18,16 @@ namespace Antix.NuGet.Application.Packages.Models
 
         readonly string _title;
         readonly string _summary;
+        readonly string _copyright;
+        readonly string _dependencies;
+        readonly string _tags;
+        readonly string _description;
+        readonly string _releaseNotes;
+        object _getDependency;
 
         public FileSystemPackageMetadata(
-            string path, 
-            dynamic package, 
+            string path,
+            dynamic package,
             DateTimeOffset created,
             string md5Hash) : this()
         {
@@ -32,6 +39,30 @@ namespace Antix.NuGet.Application.Packages.Models
 
             _title = package.metadata.title;
             _summary = package.metadata.summary;
+            _copyright = package.metadata.copyright;
+            _tags = package.metadata.tags;
+            _description = package.metadata.description;
+            _releaseNotes = package.metadata.releaseNotes;
+
+            _dependencies = GetDependencies(package.metadata);
+        }
+
+        static string GetDependencies(dynamic metadata)
+        {
+            if (metadata.dependencies == null) return string.Empty;
+
+            var dependencies = new List<string>();
+            foreach (var dependency in metadata.dependencies.dependency)
+            {
+                dependencies.Add(GetDependency(dependency));
+            }
+
+            return string.Join("|", dependencies);
+        }
+
+        static string GetDependency(dynamic dependency)
+        {
+            return string.Format("{0}:{1}:", dependency.id, dependency.version);
         }
 
         public string Path
@@ -57,6 +88,31 @@ namespace Antix.NuGet.Application.Packages.Models
         public string Summary
         {
             get { return _summary; }
+        }
+
+        public string Copyright
+        {
+            get { return _copyright; }
+        }
+
+        public string Dependencies
+        {
+            get { return _dependencies; }
+        }
+
+        public string Tags
+        {
+            get { return _tags; }
+        }
+
+        public string Description
+        {
+            get { return _description; }
+        }
+
+        public string ReleaseNotes
+        {
+            get { return _releaseNotes; }
         }
 
         public string MD5Hash

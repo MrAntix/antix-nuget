@@ -11,5 +11,10 @@ namespace Antix.NuGet.Packages.Models
 
         string Title { get; }
         string Summary { get; }
+        string Copyright { get; }
+        string Dependencies { get; }
+        string Tags { get; }
+        string Description { get; }
+        string ReleaseNotes { get; }
     }
 }
