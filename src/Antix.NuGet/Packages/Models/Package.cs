@@ -1,25 +1,40 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace Antix.NuGet.Packages.Models
 {
     public class Package
     {
         readonly IPackageMetadata _metadata;
-        readonly Stream _data;
+        readonly Stream _stream;
 
         public const string EXTN = ".nupkg";
         public const string EXTN_PATTERN = "*" + EXTN;
 
         public Package(
-            IPackageMetadata metadata, Stream data)
+            IPackageMetadata metadata, Stream stream)
         {
             _metadata = metadata;
-            _data = data;
+            _stream = stream;
         }
 
         public IPackageMetadata Metadata
         {
             get { return _metadata; }
+        }
+
+        public string MD5
+        {
+            get { return _metadata.MD5Hash; }
+        }
+
+        public Stream Stream
+        {
+            get { return _stream; }
+        }
+
+        public DateTimeOffset Created {
+            get { return _metadata.Created; }
         }
     }
 }

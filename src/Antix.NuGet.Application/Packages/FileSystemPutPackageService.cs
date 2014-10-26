@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Antix.NuGet.Application.Packages.Storage;
@@ -14,7 +13,7 @@ namespace Antix.NuGet.Application.Packages
     {
         readonly IFileSystemStorageSettings _options;
         readonly IPackageReader _packageReader;
-        
+
         public FileSystemPutPackageService(
             IFileSystemStorageSettings options,
             IPackageReader packageReader)
