@@ -49,6 +49,8 @@ namespace Antix.NuGet.Server.Configuration
             var package = response.Package;
             var rootUri = response.RequestAuthorityUri;
 
+            if (package == null) return;
+
             var item = PackageSyndication.CreateItem(package, rootUri);
 
             PackageSyndication.ApplyNS(item.AttributeExtensions, rootUri);
