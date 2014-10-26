@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+    <Schema Namespace="NuGetGallery" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+      <EntityType Name="V2FeedPackage" m:HasStream="true">
+        <Key>
+          <PropertyRef Name="Id" />
+          <PropertyRef Name="Version" />
+        </Key>
+        <Property Name="Id" Type="Edm.String" Nullable="false" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="false" />
+        <Property Name="Version" Type="Edm.String" Nullable="false" />
+        <Property Name="Authors" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationAuthorName" m:FC_ContentKind="text" m:FC_KeepInContent="false" />
+      </EntityType>
+      <EntityContainer Name="FeedContext_x0060_1" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Packages" EntityType="NuGetGallery.V2FeedPackage" />
+        <FunctionImport Name="Packages" EntitySet="Packages" ReturnType="Collection(NuGetGallery.V2FeedPackage)" m:HttpMethod="GET">
+          <Parameter Name="searchTerm" Type="Edm.String" Mode="In" />
+          <Parameter Name="includePrerelease" Type="Edm.Boolean" Mode="In" />
+        </FunctionImport>
+        <FunctionImport Name="FindPackagesById" EntitySet="Packages" ReturnType="Collection(NuGetGallery.V2FeedPackage)" m:HttpMethod="GET">
+          <Parameter Name="id" Type="Edm.String" Mode="In" />
+        </FunctionImport>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
