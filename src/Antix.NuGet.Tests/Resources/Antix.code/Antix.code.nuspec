@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Antix.code</id>
+    <version>6.0.0.9-beta</version>
+    <title>Antix Code</title>
+    <authors>Anthony Johnston</authors>
+    <owners>Antix Software Limited</owners>
+    <licenseUrl>https://raw.github.com/MrAntix/antix/master/LICENCE.md</licenseUrl>
+    <projectUrl>https://github.com/MrAntix/antix/</projectUrl>
+    <iconUrl>https://raw.github.com/MrAntix/antix/master/graphics/antix_32x32.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Antix Common Code</description>
+    <copyright>Copyright Antix Software Limited 2013</copyright>
+    <tags>Common Code, IO, Logging, Strings</tags>
+  </metadata>
+</package>

@@ -26,6 +26,7 @@ namespace Antix.NuGet.Application.Packages.Models
         readonly string _tags;
         readonly string _description;
         readonly string _releaseNotes;
+        readonly string _iconUrl;
 
         public FileSystemPackageMetadata(
             PackageInfo info) : this()
@@ -43,7 +44,8 @@ namespace Antix.NuGet.Application.Packages.Models
             _tags = info.NuSpec.metadata.tags;
             _description = info.NuSpec.metadata.description;
             _releaseNotes = info.NuSpec.metadata.releaseNotes;
-
+            _iconUrl = info.NuSpec.metadata.iconUrl;
+            
             _dependencies = GetDependencies(info.NuSpec.metadata);
         }
 
@@ -113,6 +115,11 @@ namespace Antix.NuGet.Application.Packages.Models
         public string ReleaseNotes
         {
             get { return _releaseNotes; }
+        }
+
+        public string IconUrl
+        {
+            get { return _iconUrl; }
         }
 
         public string Hash

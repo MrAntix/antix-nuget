@@ -8,6 +8,7 @@ namespace Antix.NuGet.Packages.Models
         string Version { get; }
         DateTimeOffset CreatedOn { get; }
         string Hash { get; }
+        string HashAlgorithm { get; }
 
         string Title { get; }
         string Summary { get; }
@@ -16,5 +17,6 @@ namespace Antix.NuGet.Packages.Models
         string Tags { get; }
         string Description { get; }
         string ReleaseNotes { get; }
+        string IconUrl { get; }
     }
 }

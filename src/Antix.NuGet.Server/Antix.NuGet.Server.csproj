@@ -108,10 +108,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\PackageSyndication.cs" />
     <Compile Include="Configuration\Startup.cs" />
-    <Compile Include="Configuration\PackageEntryFormatter.cs" />
-    <Compile Include="Configuration\PackageFeedFormatter.cs" />
     <Compile Include="Configuration\WindsorConfig.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
