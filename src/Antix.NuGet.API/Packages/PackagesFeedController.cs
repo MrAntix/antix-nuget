@@ -49,9 +49,13 @@ namespace Antix.NuGet.API.Packages
         [Route("Packages()")]
         public PackageFeedResponse GetFeed()
         {
-            var query = _store.Items.ToArray()
-                .OrderByDescending(i=>i.CreatedOn)
-                .Take(10);
+            var query =
+                (from i in _store.Items.ToArray()
+                    .OrderByDescending(i => i.CreatedOn)
+                    group i by i.Id
+                    into g
+                    select g.First())
+                    .OrderBy(i => i.Id);
 
             return new PackageFeedResponse
             {
