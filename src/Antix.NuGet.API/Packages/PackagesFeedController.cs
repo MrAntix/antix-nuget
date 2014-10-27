@@ -50,7 +50,7 @@ namespace Antix.NuGet.API.Packages
         public PackageFeedResponse GetFeed()
         {
             var query = _store.Items.ToArray()
-                .OrderByDescending(i=>i.Created)
+                .OrderByDescending(i=>i.CreatedOn)
                 .Take(10);
 
             return new PackageFeedResponse
@@ -68,7 +68,7 @@ namespace Antix.NuGet.API.Packages
             var query = _store.Items
                 .Where(i =>
                     i.Id.Equals(id, StringComparison.OrdinalIgnoreCase))
-                .OrderByDescending(i => i.Created);
+                .OrderByDescending(i => i.CreatedOn);
 
             return new PackageEntryResponse
             {

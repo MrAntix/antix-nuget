@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packages\IGetPackageService.cs" />
+    <Compile Include="Packages\IPackageHashService.cs" />
     <Compile Include="Packages\ISearchPackagesService.cs" />
-    <Compile Include="Packages\IPackageReader.cs" />
-    <Compile Include="Packages\Models\GetPackageRequest.cs" />
-    <Compile Include="Packages\PackageReader.cs" />
+    <Compile Include="Packages\IPackageInfoService.cs" />
+    <Compile Include="Packages\PackageInfo.cs" />
+    <Compile Include="Packages\PackageInfoService.cs" />
     <Compile Include="Packages\Models\IPackageMetadata.cs" />
     <Compile Include="Packages\Models\Package.cs" />
     <Compile Include="Packages\Models\SearchPackageCriteria.cs" />

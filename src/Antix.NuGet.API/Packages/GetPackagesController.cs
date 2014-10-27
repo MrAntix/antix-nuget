@@ -32,29 +32,5 @@ namespace Antix.NuGet.API.Packages
                     package.Path.IndexOf("\\content", StringComparison.OrdinalIgnoreCase))
                 ));
         }
-
-        //public async Task<HttpResponseMessage> GetPackage(string id, string version)
-        //{
-        //    var result = await _getPackageService
-        //        .ExecuteAsync(new GetPackageRequest
-        //        {
-        //            Id = id,
-        //            Version = version
-        //        });
-
-        //    var response = new HttpResponseMessage(HttpStatusCode.OK)
-        //    {
-        //        Content = new StreamContent(result.Data.Stream)
-        //    };
-
-        //    response.Content.Headers
-        //        .ContentType = new MediaTypeHeaderValue("application/zip");
-        //    response.Content.Headers.Add("Content-MD5", result.Data.MD5);
-        //    response.Content.Headers.LastModified = result.Data.Created;
-        //    response.Headers.ETag = new EntityTagHeaderValue(string.Format("\"{0}-{1}\"", id, version));
-        //    response.Headers.AcceptRanges.Add("bytes");
-
-        //    return response;
-        //}
     }
 }

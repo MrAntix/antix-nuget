@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Antix.NuGet.Packages;
 using Antix.NuGet.Packages.Models;
 
 namespace Antix.NuGet.Application.Packages.Models
@@ -9,12 +10,14 @@ namespace Antix.NuGet.Application.Packages.Models
     {
         readonly string _path;
 
-        public static FileSystemPackageMetadata Empty = new FileSystemPackageMetadata();
+        public static FileSystemPackageMetadata 
+            Empty = new FileSystemPackageMetadata();
 
         readonly string _id;
         readonly string _version;
-        readonly DateTimeOffset _created;
-        readonly string _md5Hash;
+        readonly DateTimeOffset _createdOn;
+        readonly string _hash;
+        readonly string _hashAlgorithm;
 
         readonly string _title;
         readonly string _summary;
@@ -23,28 +26,25 @@ namespace Antix.NuGet.Application.Packages.Models
         readonly string _tags;
         readonly string _description;
         readonly string _releaseNotes;
-        object _getDependency;
 
         public FileSystemPackageMetadata(
-            string path,
-            dynamic package,
-            DateTimeOffset created,
-            string md5Hash) : this()
+            PackageInfo info) : this()
         {
-            _path = path;
-            _id = package.metadata.id.ToLower();
-            _version = package.metadata.version.ToLower();
-            _created = created;
-            _md5Hash = md5Hash;
+            _path = info.Path;
+            _createdOn = info.CreatedOn;
+            _hash = info.Hash;
+            _hashAlgorithm = info.HashAlgoritm;
 
-            _title = package.metadata.title;
-            _summary = package.metadata.summary;
-            _copyright = package.metadata.copyright;
-            _tags = package.metadata.tags;
-            _description = package.metadata.description;
-            _releaseNotes = package.metadata.releaseNotes;
+            _id = info.NuSpec.metadata.id.ToLower();
+            _version = info.NuSpec.metadata.version.ToLower();
+            _title = info.NuSpec.metadata.title;
+            _summary = info.NuSpec.metadata.summary;
+            _copyright = info.NuSpec.metadata.copyright;
+            _tags = info.NuSpec.metadata.tags;
+            _description = info.NuSpec.metadata.description;
+            _releaseNotes = info.NuSpec.metadata.releaseNotes;
 
-            _dependencies = GetDependencies(package.metadata);
+            _dependencies = GetDependencies(info.NuSpec.metadata);
         }
 
         static string GetDependencies(dynamic metadata)
@@ -115,14 +115,19 @@ namespace Antix.NuGet.Application.Packages.Models
             get { return _releaseNotes; }
         }
 
-        public string MD5Hash
+        public string Hash
         {
-            get { return _md5Hash; }
+            get { return _hash; }
         }
 
-        public DateTimeOffset Created
+        public string HashAlgorithm
         {
-            get { return _created; }
+            get { return _hashAlgorithm; }
+        }
+
+        public DateTimeOffset CreatedOn
+        {
+            get { return _createdOn; }
         }
 
         public bool IsEmpty()

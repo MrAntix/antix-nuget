@@ -16,19 +16,18 @@ namespace Antix.NuGet.Application.Packages.Storage
         IFileSystemPackageMetadataStore
     {
         readonly Log.Delegate _log;
-        readonly IPackageReader _packageReader;
-        readonly MD5CryptoServiceProvider _hashService = new MD5CryptoServiceProvider();
+        readonly IPackageInfoService _packageInfoService;
 
         readonly IList<FileSystemPackageMetadata> _items;
 
         public FileSystemPackageMetadataStore(
             Log.Delegate log,
             IFileSystemStorageSettings settings,
-            IPackageReader packageReader,
+            IPackageInfoService packageInfoService,
             IFileSystemChangeMonitor fileSystemChangeMonitor)
         {
             _log = log;
-            _packageReader = packageReader;
+            _packageInfoService = packageInfoService;
 
             _items = new List<FileSystemPackageMetadata>();
 
@@ -75,22 +74,9 @@ namespace Antix.NuGet.Application.Packages.Storage
 
             Remove(path);
 
-            var info = new FileInfo(path);
-            string hash64;
-
-            using (var stream = info.OpenRead())
-            {
-                var hash = _hashService.ComputeHash(stream);
-                hash64 = Convert.ToBase64String(hash);
-            }
-
-            var packageMetadata = new FileSystemPackageMetadata(
-                path, 
-                _packageReader.ExecuteAsync(path).Result,
-                new DateTimeOffset(info.CreationTimeUtc),
-                hash64
-                );
-
+            var info = _packageInfoService.ExecuteAsync(path).Result;
+            
+            var packageMetadata = new FileSystemPackageMetadata(info);
 
             _log.Debug(
                 m => m("Adding package {0} version {1}",

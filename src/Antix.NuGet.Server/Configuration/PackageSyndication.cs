@@ -81,7 +81,7 @@ namespace Antix.NuGet.Server.Configuration
             properties.Add(GetString("NormalizedVersion", package.Version));
 
             properties.Add(GetString("Copyright", package.Copyright));
-            properties.Add(GetDate("Created", package.Created));
+            properties.Add(GetDate("Created", package.CreatedOn));
             properties.Add(GetString("Dependencies", package.Dependencies));
             properties.Add(GetString("Description", package.Description));
             properties.Add(GetString("Summary", package.Summary));
@@ -91,7 +91,7 @@ namespace Antix.NuGet.Server.Configuration
             properties.Add(GetBool("IsAbsoluteLatestVersion", false));
             properties.Add(GetBool("IsPrerelease", false));
 
-            properties.Add(GetDate("Published", package.Created));
+            properties.Add(GetDate("Published", package.CreatedOn));
 
             properties.Add(GetString("Title", package.Title));
 

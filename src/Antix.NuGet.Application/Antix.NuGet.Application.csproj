@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packages\FileSystemGetPackageService.cs" />
     <Compile Include="Packages\FileSystemPutPackageService.cs" />
+    <Compile Include="Packages\SHA52PackageHashService.cs" />
     <Compile Include="Packages\Storage\FileSystemPackageMetadataStore.cs" />
     <Compile Include="Packages\Storage\IFileSystemPackageMetadataStore.cs" />
     <Compile Include="Packages\Storage\IFileSystemPackageMetadataListProvider.cs" />

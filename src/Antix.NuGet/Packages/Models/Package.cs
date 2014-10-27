@@ -25,7 +25,7 @@ namespace Antix.NuGet.Packages.Models
 
         public string MD5
         {
-            get { return _metadata.MD5Hash; }
+            get { return _metadata.Hash; }
         }
 
         public Stream Stream
@@ -34,7 +34,7 @@ namespace Antix.NuGet.Packages.Models
         }
 
         public DateTimeOffset Created {
-            get { return _metadata.Created; }
+            get { return _metadata.CreatedOn; }
         }
     }
 }

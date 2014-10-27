@@ -6,8 +6,8 @@ namespace Antix.NuGet.Packages.Models
     {
         string Id { get; }
         string Version { get; }
-        DateTimeOffset Created { get; }
-        string MD5Hash { get; }
+        DateTimeOffset CreatedOn { get; }
+        string Hash { get; }
 
         string Title { get; }
         string Summary { get; }

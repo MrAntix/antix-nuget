@@ -35,12 +35,13 @@ namespace Antix.NuGet.Tests.Packages.Storage
         }
 
         IFileSystemPackageMetadataStore GetService(
-            IFileSystemChangeMonitor fileSystemMonitor)
+            IFileSystemChangeMonitor fileSystemMonitor,
+            string filePath = null)
         {
             return new FileSystemPackageMetadataStore(
                 Log.ToConsole,
                 GetStorageSettingsMock().Object,
-                GetPackageReaderMock().Object,
+                GetPackageInfoMock(filePath ?? _filePath).Object,
                 fileSystemMonitor
                 );
         }
@@ -117,12 +118,16 @@ namespace Antix.NuGet.Tests.Packages.Storage
             return mock;
         }
 
-        static Mock<IPackageReader> GetPackageReaderMock()
+        static Mock<IPackageInfoService> GetPackageInfoMock(string filePath)
         {
-            var mock = new Mock<IPackageReader>();
+            var mock = new Mock<IPackageInfoService>();
             mock.Setup(o => o.ExecuteAsync(It.IsAny<string>()))
-                .Returns(
-                    () => Task.FromResult(DynamicXml.Parse(@"<package><metadata><id>hello</id></metadata></package>")));
+                .Returns(Task.FromResult(new PackageInfo
+                {
+                    Path = filePath,
+                    NuSpec = DynamicXml.Parse(
+                        @"<package><metadata><id>hello</id><version>1.0</version></metadata></package>")
+                }));
 
             return mock;
         }

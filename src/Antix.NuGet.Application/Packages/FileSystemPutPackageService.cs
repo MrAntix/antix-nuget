@@ -12,20 +12,20 @@ namespace Antix.NuGet.Application.Packages
         IPutPackageService
     {
         readonly IFileSystemStorageSettings _options;
-        readonly IPackageReader _packageReader;
+        readonly IPackageInfoService _packageInfoService;
 
         public FileSystemPutPackageService(
             IFileSystemStorageSettings options,
-            IPackageReader packageReader)
+            IPackageInfoService packageInfoService)
         {
             _options = options;
-            _packageReader = packageReader;
+            _packageInfoService = packageInfoService;
         }
 
         public async Task<Response> ExecuteAsync(
             PutPackageRequest model)
         {
-            var metadata = await _packageReader.ExecuteAsync(model.Path);
+            var metadata = await _packageInfoService.ExecuteAsync(model.Path);
             var storePath = CreateStoreStructure(metadata, _options.GetAbsoluteRootDirectory());
 
             using (var source = File.Open(model.Path, FileMode.Open))
@@ -37,10 +37,10 @@ namespace Antix.NuGet.Application.Packages
             return Response.Empty();
         }
 
-        static string CreateStoreStructure(dynamic package, string rootDirectory)
+        static string CreateStoreStructure(PackageInfo package, string rootDirectory)
         {
-            var name = (string) package.metadata.id;
-            var version = package.metadata.version;
+            var name = (string) package.NuSpec.metadata.id;
+            var version = package.NuSpec.metadata.version;
 
             var storePath = name.Split('.')
                 .Aggregate(rootDirectory, Path.Combine);
