@@ -131,6 +131,7 @@
   <ItemGroup>
     <Content Include="client\app-module.js" />
     <Content Include="client\home\home-module.js" />
+    <Content Include="client\packages\packages-module.js" />
     <Content Include="content\animate.css" />
     <Content Include="content\animate.min.css" />
     <Content Include="content\bootstrap.css">
@@ -253,6 +254,7 @@
     <Content Include="content\variables.css.map">
       <DependentUpon>variables.css</DependentUpon>
     </Content>
+    <Content Include="client\packages\packages.cshtml" />
     <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />

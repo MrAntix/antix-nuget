@@ -11,11 +11,15 @@ namespace Antix.NuGet.Server
 {
     public class Global : HttpApplication
     {
+        Log.Delegate _log;
+
         protected void Application_Start(object sender, EventArgs e)
         {
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            new WindsorContainer()
+            var container = new WindsorContainer()
                 .Configure(GlobalConfiguration.Configuration);
+
+            _log = container.Kernel.Resolve<Log.Delegate>();
         }
 
         protected void Application_Error(Object sender, EventArgs e)
@@ -24,11 +28,7 @@ namespace Antix.NuGet.Server
             if (ex is ThreadAbortException)
                 return;
 
-            var log = (Log.Delegate) GlobalConfiguration
-                .Configuration
-                .DependencyResolver
-                .GetService(typeof (Log.Delegate));
-            log.Error(m => m(ex, "Unhandled Exception"));
+            _log.Error(m => m(ex, "Unhandled Exception"));
         }
     }
 }

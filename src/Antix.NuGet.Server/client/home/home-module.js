@@ -1,7 +1,8 @@
 ﻿'use strict';
 
 angular.module('home', [
-        'ngCookies'
+        'ngCookies',
+        'packages'
 ])
     .controller(
         'HomeController',
