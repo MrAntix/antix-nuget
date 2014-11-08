@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Web;
 using System.Web.Http;
+using System.Web.Optimization;
 using Antix.Logging;
 using Antix.NuGet.Server.Configuration;
 using Castle.Windsor;
@@ -12,6 +13,7 @@ namespace Antix.NuGet.Server
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
             new WindsorContainer()
                 .Configure(GlobalConfiguration.Configuration);
         }

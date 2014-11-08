@@ -1,0 +1,34 @@
+﻿
+.a-status {
+    position: fixed;
+    z-index: 10;
+
+    max-width:80%;
+
+    bottom: 0; right: 10%;
+    padding-right: 35px;
+}
+
+.a-status .close{
+    position:absolute;
+    top:7px;
+    right:10px;
+}
+
+.a-status.ng-hide-add,
+.a-status.ng-hide-remove {
+    display: block !important;
+}
+
+.a-status.ng-hide-add.ng-hide-add-active,
+.a-status.ng-hide-remove {
+    -webkit-animation: fadeOutDown .25s both ease-in;
+    animation: fadeOutDown .25s both ease-in;
+}
+
+.a-status.ng-hide-add,
+.a-status.ng-hide-remove.ng-hide-remove-active {
+    -webkit-animation: fadeInUp .5s both ease-in;
+    animation: fadeInUp .5s both ease-in;
+}
+
