@@ -22,6 +22,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5FAB2B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Antix.NuGet.Application", "Antix.NuGet.Application\Antix.NuGet.Application.csproj", "{2FA3AA00-9A59-49A2-B898-A46064B36FBD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".deploy", ".deploy", "{595C8A00-9440-4B21-B7FE-A4BFA3D0E70C}"
+	ProjectSection(SolutionItems) = preProject
+		.deploy\Octo.exe = .deploy\Octo.exe
+		.deploy\Octo.exe.config = .deploy\Octo.exe.config
+		.deploy\push.ps1 = .deploy\push.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
