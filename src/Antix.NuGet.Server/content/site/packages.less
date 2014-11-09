@@ -2,26 +2,34 @@
 
     ul {
         list-style: none;
-        padding:0;
+        padding: 0;
     }
 
     .package {
         position: relative;
         clear: both;
-        overflow:auto;
+        overflow: auto;
+        padding: 10px 10px 10px 50px;
+        border-bottom: solid 1px #ddd;
 
-        padding:10px 10px 10px 50px;
-        border-bottom: solid 1px #eee;
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:nth-child(even) {
+            background-color: rgba(0,0,0,.02);
+        }
+
 
         img {
             position: absolute;
-            left: 5px;
+            left: 9px;
             top: 20px;
         }
 
         .package-info {
             float: left;
-            width: 60%;
+            width: 55%;
         }
 
         .package-other-info {
