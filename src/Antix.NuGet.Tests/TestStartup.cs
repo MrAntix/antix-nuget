@@ -1,10 +1,11 @@
 ﻿using System.Web.Http;
+using Antix.NuGet.Server.Configuration;
 using Castle.Windsor;
 using Owin;
 
-namespace Antix.NuGet.Server.Configuration
+namespace Antix.NuGet.Tests
 {
-    public class Startup
+    public class TestStartup
     {
         public void Configuration(IAppBuilder appBuilder)
         {

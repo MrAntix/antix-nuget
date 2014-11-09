@@ -14,7 +14,7 @@ namespace Antix.NuGet.Tests.Packages
         {
             const string baseAddress = "http://localhost:9100";
 
-            using (WebApp.Start<Startup>(baseAddress))
+            using (WebApp.Start<TestStartup>(baseAddress))
             {
                 var process = new Process
                 {

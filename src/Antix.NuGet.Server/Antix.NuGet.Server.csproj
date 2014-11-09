@@ -1061,7 +1061,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\BundleConfig.cs" />
-    <Compile Include="Configuration\Startup.cs" />
     <Compile Include="Configuration\WindsorConfig.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
