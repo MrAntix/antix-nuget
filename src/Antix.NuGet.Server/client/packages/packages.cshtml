@@ -13,6 +13,12 @@
                     </a>
                 </h4>
                 <h5>{{package.title}}</h5>
+                <p>
+                    <a href="{{package.projectUrl}}">{{package.projectUrl | url}}</a>
+                    <span ng-if="package.licenceUrl">
+                        [<a href="{{package.licenceUrl}}">licence</a>]
+                    </span>
+                </p>
                 <hr/>
                 <p>{{package.description}}</p>
             </div>

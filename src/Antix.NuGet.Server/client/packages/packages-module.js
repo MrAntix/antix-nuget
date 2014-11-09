@@ -35,6 +35,19 @@ angular.module('packages', [
         }
     ])
 
+    .filter('url',
+    [
+        function () {
+
+            return function (url) {
+
+                var index = url.indexOf('//') + 1;
+
+                return url.substring(index).replace(/^\/+|\/+$/gm, '');
+            }
+        }
+    ])
+
     .controller('PackagesController',
     [
         '$scope', '$interval',

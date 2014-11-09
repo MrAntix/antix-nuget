@@ -18,5 +18,7 @@ namespace Antix.NuGet.Packages.Models
         string Description { get; }
         string ReleaseNotes { get; }
         string IconUrl { get; }
+        string ProjectUrl { get; }
+        string LicenceUrl { get; }
     }
 }

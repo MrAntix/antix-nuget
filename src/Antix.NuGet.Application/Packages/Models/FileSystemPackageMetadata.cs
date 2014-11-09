@@ -27,6 +27,8 @@ namespace Antix.NuGet.Application.Packages.Models
         readonly string _description;
         readonly string _releaseNotes;
         readonly string _iconUrl;
+        readonly string _projectUrl;
+        readonly string _licenceUrl;
 
         public FileSystemPackageMetadata(
             PackageInfo info) : this()
@@ -45,6 +47,8 @@ namespace Antix.NuGet.Application.Packages.Models
             _description = info.NuSpec.metadata.description;
             _releaseNotes = info.NuSpec.metadata.releaseNotes;
             _iconUrl = info.NuSpec.metadata.iconUrl;
+            _projectUrl = info.NuSpec.metadata.projectUrl;
+            _licenceUrl = info.NuSpec.metadata.licenceUrl;
             
             _dependencies = GetDependencies(info.NuSpec.metadata);
         }
@@ -135,6 +139,16 @@ namespace Antix.NuGet.Application.Packages.Models
         public DateTimeOffset CreatedOn
         {
             get { return _createdOn; }
+        }
+
+        public string ProjectUrl
+        {
+            get { return _projectUrl; }
+        }
+
+        public string LicenceUrl
+        {
+            get { return _licenceUrl; }
         }
 
         public bool IsEmpty()
