@@ -55,7 +55,7 @@ namespace Antix.NuGet.Tests.Packages
                 Console.WriteLine(process.StandardError.ReadToEnd());
 
                 process.WaitForExit();
-                Thread.Sleep(500);
+                Thread.Sleep(2000);
 
                 Assert.Equal(0, process.ExitCode);
             }
