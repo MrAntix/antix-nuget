@@ -148,6 +148,12 @@
     <Content Include="content\site.min.css">
       <DependentUpon>site.css</DependentUpon>
     </Content>
+    <Content Include="content\site\packages.css">
+      <DependentUpon>packages.less</DependentUpon>
+    </Content>
+    <Content Include="content\site\packages.min.css">
+      <DependentUpon>packages.css</DependentUpon>
+    </Content>
     <Content Include="content\variables.css">
       <DependentUpon>variables.less</DependentUpon>
     </Content>
@@ -255,6 +261,10 @@
       <DependentUpon>variables.css</DependentUpon>
     </Content>
     <Content Include="client\packages\packages.cshtml" />
+    <Content Include="content\site\packages.less" />
+    <Content Include="content\site\packages.css.map">
+      <DependentUpon>packages.css</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
