@@ -31,5 +31,14 @@ namespace Antix.NuGet.API.Packages {
                 return ((string)(this["PackageRoot"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("00000000-0000-0000-0000-000000000000")]
+        public global::System.Guid APIKey {
+            get {
+                return ((global::System.Guid)(this["APIKey"]));
+            }
+        }
     }
 }
