@@ -37,15 +37,20 @@ angular.module('packages', [
 
     .controller('PackagesController',
     [
-        '$scope',
+        '$scope', '$interval',
         'PackagesService',
         function (
-            $scope,
+            $scope, $interval,
             PackagesService) {
 
-            PackagesService.get(function (response) {
-                $scope.packages = response.packages;
-            });
+            var load = function() {
+
+                PackagesService.get(function(response) {
+                    $scope.packages = response.packages;
+                });
+            }
+
+            $interval(load, 1000);
         }
     ])
 
