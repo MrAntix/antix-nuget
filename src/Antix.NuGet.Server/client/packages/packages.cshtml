@@ -6,7 +6,12 @@
 
             <img src="{{package.iconUrl}}" alt="{{package.id}} icon" />
             <div class="package-info">
-                <h4>{{package.id}} <small>{{package.version}}</small></h4>
+                <h4>
+                    <a href="/package/{{package.id}}/{{package.version}}">
+                        {{package.id}}
+                        <small>{{package.version}}</small>
+                    </a>
+                </h4>
                 <h5>{{package.title}}</h5>
                 <hr/>
                 <p>{{package.description}}</p>
