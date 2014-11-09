@@ -7,12 +7,14 @@ namespace Antix.NuGet.Tests
 {
     public class TestStartup
     {
+        public IWindsorContainer Container { get; set; }
+
         public void Configuration(IAppBuilder appBuilder)
         {
             var apiConfig =
                 new HttpConfiguration();
 
-            new WindsorContainer()
+            Container = new WindsorContainer()
                 .Configure(apiConfig);
 
             appBuilder.UseWebApi(apiConfig);

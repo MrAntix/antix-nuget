@@ -12,6 +12,7 @@ using Antix.Http.Filters.Logging;
 using Antix.IO;
 using Antix.Logging;
 using Antix.NuGet.API.Packages;
+using Antix.NuGet.API.Packages.Filters;
 using Antix.NuGet.API.Packages.Formatters;
 using Antix.NuGet.Application.Packages.Models;
 using Antix.NuGet.Application.Packages.Storage;
@@ -58,7 +59,7 @@ namespace Antix.NuGet.Server.Configuration
                         {
                             var m = string.Format(f, a);
                             Trace.WriteLine(string.Format(
-                                "{0:mm:ss:ffff} [{1}]: {2}", DateTime.UtcNow, l, m));
+                                "{0:G} [{1}]: {2}", DateTime.UtcNow, l, m));
                             if (ex != null)
                             {
                                 Trace.WriteLine(ex);
@@ -110,6 +111,14 @@ namespace Antix.NuGet.Server.Configuration
                     .WithServiceSelf()
                     .LifestyleTransient()
                 );
+            container.Register(
+                Classes
+                    .FromAssemblyContaining<PackagesSettings>()
+                    .BasedOn<IService>()
+                    .WithServiceAllInterfaces()
+                    .WithServiceSelf()
+                    .LifestyleTransient()
+                );
         }
 
         static void RegisterWebApi(
@@ -138,6 +147,15 @@ namespace Antix.NuGet.Server.Configuration
             configuration.Services.Replace(
                 typeof (IFilterProvider),
                 new ServiceFilterProvider(container.Resolve)
+                );
+
+            container.Register(
+                Classes
+                    .FromAssemblyContaining<APIKeyFilter>()
+                    .BasedOn<IFilter>()
+                    .WithServiceSelf()
+                    .WithServiceAllInterfaces()
+                    .LifestyleTransient()
                 );
 
             container.Register(

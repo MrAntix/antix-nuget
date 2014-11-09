@@ -3,6 +3,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using Antix.NuGet.API.Packages.Filters;
 using Antix.NuGet.Packages;
 using Antix.NuGet.Packages.Models;
 
@@ -13,11 +14,13 @@ namespace Antix.NuGet.API.Packages
     {
         readonly IPutPackageService _putPackageService;
 
-        public PutPackagesController(IPutPackageService putPackageService)
+        public PutPackagesController(
+            IPutPackageService putPackageService)
         {
             _putPackageService = putPackageService;
         }
 
+        [APIKey]
         [Route("packages")]
         public async Task Put()
         {

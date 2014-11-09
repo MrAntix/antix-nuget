@@ -61,15 +61,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packages\Filters\APIKeyActionFilterAttribute.cs" />
+    <Compile Include="Packages\Filters\APIKeyAttribute.cs" />
+    <Compile Include="Packages\Filters\APIKeyFilter.cs" />
     <Compile Include="Packages\Formatters\PackageEntryFormatter.cs" />
     <Compile Include="Packages\Formatters\PackageFeedFormatter.cs" />
     <Compile Include="Packages\Formatters\PackageSyndication.cs" />
     <Compile Include="Packages\GetPackagesController.cs" />
+    <Compile Include="Packages\IPackagesSettings.cs" />
     <Compile Include="Packages\Models\PackageEntryResponse.cs" />
     <Compile Include="Packages\Models\PackageFeedResponse.cs" />
     <Compile Include="Packages\Models\PackageRequest.cs" />
     <Compile Include="Packages\PackagesFeedController.cs" />
+    <Compile Include="Packages\PackagesSettings.cs" />
     <Compile Include="Packages\PackagesSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
