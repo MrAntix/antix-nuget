@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
+using System.Threading.Tasks;
 using Antix.NuGet.API.Packages;
 using Antix.NuGet.API.Packages.Filters;
 using Castle.MicroKernel.Registration;
@@ -54,14 +55,14 @@ namespace Antix.NuGet.Tests.Packages
                 Console.WriteLine(process.StandardError.ReadToEnd());
 
                 process.WaitForExit();
-                Thread.Sleep(150);
+                Thread.Sleep(500);
 
                 Assert.Equal(0, process.ExitCode);
             }
         }
 
         [Fact]
-        public void when_no_key_expected()
+        public async Task when_no_key_expected()
         {
             using (var server = TestServer.Create(appBuilder =>
             {
@@ -78,42 +79,42 @@ namespace Antix.NuGet.Tests.Packages
                 var request = GetRequest(Guid.Empty);
 
                 var response =
-                    server.HttpClient.SendAsync(request).Result;
+                    await server.HttpClient.SendAsync(request);
 
                 Assert.Equal(HttpStatusCode.NoContent, response.StatusCode);
             }
         }
 
         [Fact]
-        public void when_key_expected_but_is_not_supplied()
+        public async Task when_key_expected_but_is_not_supplied()
         {
             using (var server = TestServer.Create<TestStartup>())
             {
                 var request = GetRequest(Guid.Empty);
 
                 var response =
-                    server.HttpClient.SendAsync(request).Result;
+                    await server.HttpClient.SendAsync(request);
 
                 Assert.Equal(HttpStatusCode.Forbidden, response.StatusCode);
             }
         }
 
         [Fact]
-        public void when_key_expected_but_is_incorrect()
+        public async Task when_key_expected_but_is_incorrect()
         {
             using (var server = TestServer.Create<TestStartup>())
             {
                 var request = GetRequest(Guid.NewGuid());
 
                 var response =
-                    server.HttpClient.SendAsync(request).Result;
+                    await server.HttpClient.SendAsync(request);
 
                 Assert.Equal(HttpStatusCode.Forbidden, response.StatusCode);
             }
         }
 
         [Fact]
-        public void when_key_expected_and_correct()
+        public async Task when_key_expected_and_correct()
         {
             IPackagesSettings settings = null;
 
@@ -128,7 +129,7 @@ namespace Antix.NuGet.Tests.Packages
                 var request = GetRequest(settings.APIKey);
 
                 var response =
-                    server.HttpClient.SendAsync(request).Result;
+                    await server.HttpClient.SendAsync(request);
 
                 Assert.Equal(HttpStatusCode.NoContent, response.StatusCode);
             }
