@@ -80,6 +80,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Packages\GetPackageTest.cs" />
     <Compile Include="Packages\PushPackageTest.cs" />
     <Compile Include="Packages\Storage\FileSystemPackageMetadataStoreTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,6 +88,9 @@
   <ItemGroup>
     <None Include="app.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="content\packages\Antix\code\Antix.code.6.0.0.9-beta.nupkg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
     <None Include="Resources\Antix.code.nupkg">

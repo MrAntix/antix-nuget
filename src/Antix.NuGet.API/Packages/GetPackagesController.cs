@@ -21,16 +21,20 @@ namespace Antix.NuGet.API.Packages
         [Route("package/{id}/{version}")]
         public async Task<RedirectResult> GetPackage(string id, string version)
         {
+            if (id == null) throw new ArgumentNullException("id");
+            if (version == null) throw new ArgumentNullException("version");
+
             var package = (FileSystemPackageMetadata) _store.Items.First(
                 i => i.Id.Equals(id, StringComparison.OrdinalIgnoreCase)
                      && i.Version.Equals(version, StringComparison.OrdinalIgnoreCase));
 
-
-            return Redirect(new Uri(
+            var redirectUri = new Uri(
                 new Uri(Request.RequestUri.GetLeftPart(UriPartial.Authority)),
                 package.Path.Substring(
                     package.Path.IndexOf("\\content", StringComparison.OrdinalIgnoreCase))
-                ));
+                );
+
+            return Redirect(redirectUri);
         }
     }
 }
