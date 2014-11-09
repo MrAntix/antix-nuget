@@ -1,0 +1,24 @@
+﻿<div class="packages">
+
+    <ul>
+        <li class="package"
+            ng-repeat="package in packages">
+
+            <img src="{{package.iconUrl}}" alt="{{package.id}} icon" />
+            <div class="package-info">
+                <h4>{{package.id}} <small>{{package.version}}</small></h4>
+                <h5>{{package.title}}</h5>
+                <p>{{package.description}}</p>
+            </div>
+
+            <div class="package-other-info">
+                <p>
+                    <label>Dependencies</label>
+                    <ul ng-bind-html="package.dependencies | packageDependencies"></ul>
+                </p>
+                <p><label>Tags</label> {{package.tags}}</p>
+            </div>
+        </li>
+    </ul>
+
+</div>
