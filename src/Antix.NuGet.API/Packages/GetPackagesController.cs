@@ -12,10 +12,14 @@ namespace Antix.NuGet.API.Packages
         ApiController
     {
         readonly IFileSystemPackageMetadataStore _store;
+        readonly string _storeRootDirectory;
 
-        public GetPackagesController(IFileSystemPackageMetadataStore store)
+        public GetPackagesController(
+            IFileSystemPackageMetadataStore store,
+            IFileSystemStorageSettings storeSettings)
         {
             _store = store;
+            _storeRootDirectory = storeSettings.GetAbsoluteRootDirectory();
         }
 
         [Route("package/{id}/{version}")]
@@ -30,9 +34,8 @@ namespace Antix.NuGet.API.Packages
 
             var redirectUri = new Uri(
                 new Uri(Request.RequestUri.GetLeftPart(UriPartial.Authority)),
-                "\\content" +
-                package.Path.Substring(
-                    package.Path.IndexOf("\\packges", StringComparison.OrdinalIgnoreCase))
+                PackagesSettings.Default.PackageRoot +
+                package.Path.Substring(_storeRootDirectory.Length)
                 );
 
             return Redirect(redirectUri);

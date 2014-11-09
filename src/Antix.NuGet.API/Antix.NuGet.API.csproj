@@ -69,6 +69,11 @@
     <Compile Include="Packages\Models\PackageFeedResponse.cs" />
     <Compile Include="Packages\Models\PackageRequest.cs" />
     <Compile Include="Packages\PackagesFeedController.cs" />
+    <Compile Include="Packages\PackagesSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>PackagesSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Packages\PutPackagesController.cs" />
     <Compile Include="Packages\XmlResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -99,6 +104,10 @@
     <Content Include="Packages\Resources\metadata.xml">
       <Generator>ResXFileCodeGenerator</Generator>
     </Content>
+    <None Include="Packages\PackagesSettings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>PackagesSettings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\Metadata.txt" />
   </ItemGroup>
   <ItemGroup>
