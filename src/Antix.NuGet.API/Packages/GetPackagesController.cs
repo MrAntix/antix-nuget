@@ -30,8 +30,9 @@ namespace Antix.NuGet.API.Packages
 
             var redirectUri = new Uri(
                 new Uri(Request.RequestUri.GetLeftPart(UriPartial.Authority)),
+                "\\content" +
                 package.Path.Substring(
-                    package.Path.IndexOf("\\content", StringComparison.OrdinalIgnoreCase))
+                    package.Path.IndexOf("\\packges", StringComparison.OrdinalIgnoreCase))
                 );
 
             return Redirect(redirectUri);
