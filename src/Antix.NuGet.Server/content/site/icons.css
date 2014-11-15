@@ -1,0 +1,15 @@
+﻿.icon {
+  padding-left: 26px !important;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: left center;
+}
+.icon.icon-only {
+  overflow: hidden;
+  width: 24px;
+  padding-right: 0!important;
+}
+.icon.icon-github {
+  background-image: url(../branding/github/icon-24x24.png);
+}
+/*# sourceMappingURL=icons.css.map */

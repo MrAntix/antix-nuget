@@ -20,45 +20,42 @@ namespace Antix.NuGet.Tests.Packages
     {
         const string PackagePath = "resources\\Antix.code.nupkg";
 
-        [Fact(Skip = "unreliable, other tests will cover enough")]
+        [Fact(Skip = "make sure the site is running on baseAddress below")]
         public void integration_happiness()
         {
-            const string baseAddress = "http://localhost:9100";
+            const string baseAddress = "http://localhost:50358";
 
-            using (WebApp.Start<TestStartup>(baseAddress))
+            var parameters = string.Format(
+                "push {0} -ApiKey {1} -Source {2}/packages",
+                PackagePath,
+                PackagesSettings.Default.APIKey,
+                baseAddress);
+
+            Console.WriteLine(parameters);
+
+            var process = new Process
             {
-                var parameters = string.Format(
-                    "push {0} -ApiKey {1} -Source {2}/packages",
-                    PackagePath,
-                    PackagesSettings.Default.APIKey,
-                    baseAddress);
-
-                Console.WriteLine(parameters);
-
-                var process = new Process
+                StartInfo = new ProcessStartInfo(
+                    @"..\..\..\.NuGet\nuget.exe",
+                    parameters
+                    )
                 {
-                    StartInfo = new ProcessStartInfo(
-                        @"..\..\..\.NuGet\nuget.exe",
-                        parameters
-                        )
-                    {
-                        UseShellExecute = false,
-                        CreateNoWindow = true,
-                        RedirectStandardOutput = true,
-                        RedirectStandardError = true
-                    }
-                };
+                    UseShellExecute = false,
+                    CreateNoWindow = true,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true
+                }
+            };
 
-                process.Start();
+            process.Start();
 
-                Console.WriteLine(process.StandardOutput.ReadToEnd());
-                Console.WriteLine(process.StandardError.ReadToEnd());
+            Console.WriteLine(process.StandardOutput.ReadToEnd());
+            Console.WriteLine(process.StandardError.ReadToEnd());
 
-                process.WaitForExit();
-                Thread.Sleep(2000);
+            process.WaitForExit();
+            Thread.Sleep(2000);
 
-                Assert.Equal(0, process.ExitCode);
-            }
+            Assert.Equal(0, process.ExitCode);
         }
 
         [Fact]
