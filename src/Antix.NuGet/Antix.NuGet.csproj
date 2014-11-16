@@ -41,9 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\Event.cs" />
+    <Compile Include="Events\EventBusExtensions.cs" />
+    <Compile Include="Events\IEventsBus.cs" />
     <Compile Include="Packages\IPackageHashService.cs" />
     <Compile Include="Packages\ISearchPackagesService.cs" />
     <Compile Include="Packages\IPackageInfoService.cs" />
+    <Compile Include="Packages\PackageEvents.cs" />
     <Compile Include="Packages\PackageInfo.cs" />
     <Compile Include="Packages\PackageInfoService.cs" />
     <Compile Include="Packages\Models\IPackageMetadata.cs" />

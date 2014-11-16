@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Net;
-using System.ServiceModel.Syndication;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Dispatcher;
@@ -14,13 +12,21 @@ using Antix.Logging;
 using Antix.NuGet.API.Packages;
 using Antix.NuGet.API.Packages.Filters;
 using Antix.NuGet.API.Packages.Formatters;
+using Antix.NuGet.Application.Events;
+using Antix.NuGet.Application.Hubs;
 using Antix.NuGet.Application.Packages.Models;
 using Antix.NuGet.Application.Packages.Storage;
+using Antix.NuGet.Events;
 using Antix.NuGet.Packages.Models;
 using Antix.Services;
+using Antix.SignalR;
 using Castle.Facilities.TypedFactory;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
+using Microsoft.AspNet.SignalR;
+using Microsoft.AspNet.SignalR.Hubs;
+using Microsoft.AspNet.SignalR.Infrastructure;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace Antix.NuGet.Server.Configuration
@@ -29,53 +35,84 @@ namespace Antix.NuGet.Server.Configuration
     {
         public static IWindsorContainer Configure(
             this IWindsorContainer container,
-            HttpConfiguration configuration)
+            HttpConfiguration httpConfiguration,
+            HubConfiguration hubConfiguration
+            )
         {
             container.AddFacility(new TypedFactoryFacility());
 
             RegisterLogging(container);
             RegisterServices(container);
 
-            RegisterWebApi(container, configuration);
+            RegisterWebApi(container, httpConfiguration);
+            RegisterSignarR(container, hubConfiguration);
 
             return container;
         }
 
+        static void RegisterSignarR(
+            IWindsorContainer container,
+            ConnectionConfiguration hubConfiguration)
+        {
+            // cannot use, signalr has special requirements eg JSON ContractResolver below
+            //hubConfiguration.Resolver
+            //    = new WindsorDependencyResolver(container, LogDeletate);
+
+            hubConfiguration.Resolver
+                .Register(
+                    typeof(IHubActivator),
+                    () => new SignalRHubActivator(container.Resolve));
+            hubConfiguration.Resolver
+                .Register(
+                    typeof(JsonSerializer),
+                    ()=>new JsonSerializer
+                    {
+                        ContractResolver = new SignalRContractResolver()
+                    });
+
+            container.Register(
+                Classes
+                    .FromAssemblyContaining<EventsHub>()
+                    .BasedOn<IHub>()
+                    .WithServiceSelf()
+                    .LifestyleTransient()
+                );
+
+            container.Register(
+                Component.For<IEventsBus>()
+                    .UsingFactoryMethod(k => new EventsBus(
+                        hubConfiguration.Resolver.Resolve<IConnectionManager>()
+                            .GetHubContext<EventsHub>()
+                        ))
+                    .LifestyleTransient()
+                );
+
+            container.Register(
+                Component.For<IJavaScriptMinifier>()
+                    .ImplementedBy<JavaScriptMinifier>()
+                    .LifestyleSingleton()
+                );
+        }
+
         static void RegisterLogging(IWindsorContainer container)
         {
-            if (Log.DEBUG)
-            {
-                container.Register(
-                    Component.For<Log.Delegate>()
-                        .Instance(Log.ToDebug)
-                        .LifestyleSingleton()
-                    );
-            }
-            else
-            {
-                container.Register(
-                    Component.For<Log.Delegate>()
-                        .Instance(l => (ex, f, a) =>
-                        {
-                            var m = string.Format(f, a);
-                            Trace.WriteLine(string.Format(
-                                "{0:G} [{1}]: {2}", DateTime.UtcNow, l, m));
-                            if (ex != null)
-                            {
-                                Trace.WriteLine(ex);
-                            }
-
-                            Trace.Flush();
-                            Trace.Close();
-                        })
-                        .LifestyleSingleton()
-                    );
-            }
+            container.Register(
+                Component.For<Log.Delegate>()
+                    .Instance(LogDeletate)
+                    .LifestyleSingleton()
+                );
         }
 
         static void RegisterServices(
             IWindsorContainer container)
         {
+            container.Register(
+                Component.For<JsonSerializer>()
+                    .UsingFactoryMethod(k => new JsonSerializer
+                    {
+                        ContractResolver = new CamelCasePropertyNamesContractResolver()
+                    })
+                );
             container.Register(
                 Component.For<IFileSystemChangeMonitor>()
                     .ImplementedBy<FileSystemChangeMonitor>()
@@ -89,7 +126,7 @@ namespace Antix.NuGet.Server.Configuration
 
             container.Register(
                 Classes
-                    .FromAssemblyContaining<Global>()
+                    .FromAssemblyContaining<Startup>()
                     .BasedOn<IService>()
                     .WithServiceAllInterfaces()
                     .WithServiceSelf()
@@ -183,6 +220,34 @@ namespace Antix.NuGet.Server.Configuration
             configuration.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
 
             configuration.EnsureInitialized();
+        }
+
+        static Log.Delegate _log;
+
+        public static Log.Delegate LogDeletate
+        {
+            get { return _log ?? (_log = CreateLogDelegate()); }
+        }
+
+        static Log.Delegate CreateLogDelegate()
+        {
+            if (!Log.DEBUG)
+            {
+                return Log.ToDebug;
+            }
+            return l => (ex, f, a) =>
+            {
+                var m = string.Format(f, a);
+                Trace.WriteLine(string.Format(
+                    "{0:G} [{1}]: {2}", DateTime.UtcNow, l, m));
+                if (ex != null)
+                {
+                    Trace.WriteLine(ex);
+                }
+
+                Trace.Flush();
+                Trace.Close();
+            };
         }
     }
 }

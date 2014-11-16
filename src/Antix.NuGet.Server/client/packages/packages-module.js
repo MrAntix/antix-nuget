@@ -63,7 +63,10 @@ angular.module('packages', [
                 });
             }
 
-            $interval(load, 1000);
+            load();
+
+            $scope.$on('packageStoreEvent:Added', load);
+            $scope.$on('packageStoreEvent:Removed', load);
         }
     ])
 

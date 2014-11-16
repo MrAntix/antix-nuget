@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Antix.IO;
 using Antix.Logging;
 using Antix.NuGet.Application.Packages.Storage;
+using Antix.NuGet.Events;
 using Antix.NuGet.Packages;
 using Antix.Xml;
 using Moq;
@@ -23,7 +25,8 @@ namespace Antix.NuGet.Tests.Packages.Storage
         {
             var fileSystemMonitor = GetChangeMonitor();
 
-            var service = GetService(fileSystemMonitor);
+            var events = new List<Event>();
+            var service = GetService(fileSystemMonitor, events: events);
 
             fileSystemMonitor.Changed(new FileSystemChangedEvent
             {
@@ -32,17 +35,20 @@ namespace Antix.NuGet.Tests.Packages.Storage
             });
 
             Assert.Equal(1, service.Items.Count());
+            Assert.Equal(1, events.Count);
         }
 
         IFileSystemPackageMetadataStore GetService(
             IFileSystemChangeMonitor fileSystemMonitor,
-            string filePath = null)
+            string filePath = null,
+            List<Event> events = null)
         {
             return new FileSystemPackageMetadataStore(
                 Log.ToConsole,
                 GetStorageSettingsMock().Object,
                 GetPackageInfoMock(filePath ?? _filePath).Object,
-                fileSystemMonitor
+                fileSystemMonitor,
+                GetEventBusMock(events).Object
                 );
         }
 
@@ -51,7 +57,8 @@ namespace Antix.NuGet.Tests.Packages.Storage
         {
             var fileSystemMonitor = GetChangeMonitor();
 
-            var service = GetService(fileSystemMonitor);
+            var events = new List<Event>();
+            var service = GetService(fileSystemMonitor, events: events);
 
             fileSystemMonitor.Changed(new FileSystemChangedEvent
             {
@@ -65,6 +72,7 @@ namespace Antix.NuGet.Tests.Packages.Storage
             });
 
             Assert.Equal(0, service.Items.Count());
+            Assert.Equal(2, events.Count);
         }
 
         [Fact]
@@ -150,6 +158,19 @@ namespace Antix.NuGet.Tests.Packages.Storage
                 .Callback((FileSystemChangedEvent e) => change(e));
 
             return mock.Object;
+        }
+
+        static Mock<IEventsBus> GetEventBusMock(ICollection<Event> events = null)
+        {
+            var mock = new Mock<IEventsBus>();
+
+            if (events == null) events = new List<Event>();
+
+            mock
+                .Setup(o => o.Raise(It.IsAny<Event>()))
+                .Callback((Event e) => events.Add(e));
+
+            return mock;
         }
     }
 }

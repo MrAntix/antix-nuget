@@ -18,6 +18,8 @@ namespace Antix.NuGet.Server.Configuration
                     .Include("~/Scripts/angular-sanitize.js")
                     .Include("~/Scripts/angular-ui/ui-bootstrap-tpls.js")
                     .Include("~/Scripts/angularUI/ui-router.js")
+                    .Include("~/Scripts/jquery-{version}.js")
+                    .Include("~/Scripts/jquery.signalR-{version}.js")
                     .IncludeDirectory("~/Scripts/antix/", "*.js", true)
                     .IncludeDirectory("~/client/", "*.js", true)
                 );

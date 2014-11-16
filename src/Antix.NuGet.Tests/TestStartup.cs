@@ -1,6 +1,7 @@
 ﻿using System.Web.Http;
 using Antix.NuGet.Server.Configuration;
 using Castle.Windsor;
+using Microsoft.AspNet.SignalR;
 using Owin;
 
 namespace Antix.NuGet.Tests
@@ -11,11 +12,11 @@ namespace Antix.NuGet.Tests
 
         public void Configuration(IAppBuilder appBuilder)
         {
-            var apiConfig =
-                new HttpConfiguration();
+            var apiConfig = new HttpConfiguration();
+            var hubConfig = new HubConfiguration();
 
             Container = new WindsorContainer()
-                .Configure(apiConfig);
+                .Configure(apiConfig, hubConfig);
 
             appBuilder.UseWebApi(apiConfig);
         }

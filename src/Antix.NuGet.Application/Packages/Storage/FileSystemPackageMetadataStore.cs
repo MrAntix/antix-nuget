@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Threading.Tasks;
 using Antix.IO;
 using Antix.Logging;
 using Antix.NuGet.Application.Packages.Models;
+using Antix.NuGet.Events;
 using Antix.NuGet.Packages;
 using Antix.NuGet.Packages.Models;
 
@@ -17,6 +17,7 @@ namespace Antix.NuGet.Application.Packages.Storage
     {
         readonly Log.Delegate _log;
         readonly IPackageInfoService _packageInfoService;
+        readonly IEventsBus _eventsBus;
 
         readonly IList<FileSystemPackageMetadata> _items;
 
@@ -24,10 +25,12 @@ namespace Antix.NuGet.Application.Packages.Storage
             Log.Delegate log,
             IFileSystemStorageSettings settings,
             IPackageInfoService packageInfoService,
-            IFileSystemChangeMonitor fileSystemChangeMonitor)
+            IFileSystemChangeMonitor fileSystemChangeMonitor,
+            IEventsBus eventsBus)
         {
             _log = log;
             _packageInfoService = packageInfoService;
+            _eventsBus = eventsBus;
 
             _items = new List<FileSystemPackageMetadata>();
 
@@ -75,7 +78,7 @@ namespace Antix.NuGet.Application.Packages.Storage
             Remove(path);
 
             var info = _packageInfoService.ExecuteAsync(path).Result;
-            
+
             var packageMetadata = new FileSystemPackageMetadata(info);
 
             _log.Debug(
@@ -83,6 +86,7 @@ namespace Antix.NuGet.Application.Packages.Storage
                     packageMetadata.Id, packageMetadata.Version));
 
             _items.Add(packageMetadata);
+            _eventsBus.Raise(PackageStoreEvents.Added);
         }
 
         void Remove(string path)
@@ -99,6 +103,8 @@ namespace Antix.NuGet.Application.Packages.Storage
                 _log.Debug(m => m("Removing {0}", item.Path));
                 _items.Remove(item);
             }
+
+            _eventsBus.Raise(PackageStoreEvents.Removed);
         }
 
         void Initialize(string rootDirectory)
@@ -122,6 +128,8 @@ namespace Antix.NuGet.Application.Packages.Storage
                             Type = FileSystemChangedEventType.AddedOrUpdated
                         });
                     }
+
+                    _eventsBus.Raise(PackageStoreEvents.Initialized);
                 });
             }
         }

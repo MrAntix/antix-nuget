@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using Antix.NuGet.API.Packages;
 using Antix.NuGet.API.Packages.Filters;
 using Castle.MicroKernel.Registration;
-using Microsoft.Owin.Hosting;
 using Microsoft.Owin.Testing;
 using Moq;
 using Xunit;
@@ -20,7 +19,7 @@ namespace Antix.NuGet.Tests.Packages
     {
         const string PackagePath = "resources\\Antix.code.nupkg";
 
-        [Fact(Skip = "make sure the site is running on baseAddress below")]
+        [Fact]
         public void integration_happiness()
         {
             const string baseAddress = "http://localhost:50358";

@@ -17,6 +17,18 @@ app
                 $log, $scope
                 ) {
 
+                var eventsHub = $.connection.eventsHub;
+                $.connection.hub.start();
+                $log.debug('AppController.hub.start');
+
+                eventsHub.client.raise = function (e) {
+                    $log.debug(
+                        'Server Event: '
+                        + JSON.stringify(e)
+                    );
+                    $scope.$broadcast(e.name, e.args);
+                }
+
             }
         ])
 
