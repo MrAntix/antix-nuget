@@ -1,23 +1,49 @@
-﻿@media (min-width: 480px) {
-  body {
-    padding-top: 55px;
+﻿body {
+  padding-top: 55px;
+  -moz-transition: padding-top 0.1s;
+  -o-transition: padding-top 0.1s;
+  -webkit-transition: padding-top 0.1s;
+  transition: padding-top 0.1s;
+}
+body #PageHeader {
+  height: 50px;
+  -moz-transition: height .1s;
+  -o-transition: height .1s;
+  -webkit-transition: height .1s;
+  transition: height .1s;
+}
+body #PageHeader .navbar-brand {
+  height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -moz-transition: all .1s;
+  -o-transition: all .1s;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
+@media (min-width: 480px) {
+  body.scroll-top-at-top {
+    padding-top: 82.5px;
     -moz-transition: padding-top 0.1s;
     -o-transition: padding-top 0.1s;
     -webkit-transition: padding-top 0.1s;
     transition: padding-top 0.1s;
   }
-  body #PageHeader {
-    height: 50px;
+  body.scroll-top-at-top #PageHeader {
+    height: 75px;
     -moz-transition: height .1s;
     -o-transition: height .1s;
     -webkit-transition: height .1s;
     transition: height .1s;
   }
-  body #PageHeader .navbar-brand {
-    height: 50px;
-    font-size: 20px;
+  body.scroll-top-at-top #PageHeader .navbar-brand {
+    height: 75px;
+    font-size: 30px;
     font-weight: 100;
-    line-height: 50px;
+    line-height: 75px;
     padding-top: 0;
     padding-bottom: 0;
     -moz-transition: all .1s;
