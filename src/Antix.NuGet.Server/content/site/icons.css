@@ -5,6 +5,7 @@
   background-position: left center;
 }
 .icon.icon-only {
+  display: inline-block;
   overflow: hidden;
   width: 24px;
   padding-top: 5px!important;
