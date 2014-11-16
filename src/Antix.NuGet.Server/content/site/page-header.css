@@ -20,14 +20,14 @@
   }
 }
 @media (min-width: 992px) {
-  body[scroll-top='0'] #PageHeader {
+  body.scroll-top-at-top #PageHeader {
     height: 85px;
     -moz-transition: height .1s;
     -o-transition: height .1s;
     -webkit-transition: height .1s;
     transition: height .1s;
   }
-  body[scroll-top='0'] #PageHeader .navbar-brand {
+  body.scroll-top-at-top #PageHeader .navbar-brand {
     height: 85px;
     font-size: 34px;
     font-weight: 100;
