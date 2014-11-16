@@ -29,6 +29,8 @@
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  -ms-word-break: break-all;
+  word-break: break-all;
 }
 @media (min-width: 768px) {
   .packages .package .package-info {
