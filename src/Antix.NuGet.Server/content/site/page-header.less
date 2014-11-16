@@ -1,6 +1,11 @@
 ﻿@import (reference) url('..\variables.less');
 
 .setHeader(@height) {
+    padding-top: @height * 1.1;
+    -moz-transition: padding-top .1s;
+    -o-transition: padding-top .1s;
+    -webkit-transition: padding-top .1s;
+    transition: padding-top .1s;
 
     #PageHeader {
         height: @height;
@@ -30,9 +35,15 @@
     }
 }
 
+@media (min-width: @screen-sm-min) {
+    body.scroll-top-at-top {
+        .setHeader(100px);
+    }
+}
+
 @media (min-width: @screen-md-min) {
     body.scroll-top-at-top {
-        .setHeader(85px);
+        .setHeader(140px);
     }
 }
 
@@ -40,10 +51,6 @@
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
     box-shadow: 0 0 10px rgba(0,0,0,.4);
-}
-body{
-    padding-top: 100px;
-
 }
 body[scroll-top='0'] {
     #PageHeader {
