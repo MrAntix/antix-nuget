@@ -1,4 +1,8 @@
-﻿.packages ul {
+﻿.packages {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.packages ul {
   list-style: none;
   padding: 0;
 }
@@ -21,11 +25,27 @@
   top: 20px;
 }
 .packages .package .package-info {
-  float: left;
-  width: 55%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .packages .package .package-info {
+    float: left;
+    width: 58.33333333%;
+  }
 }
 .packages .package .package-other-info {
-  float: right;
-  width: 40%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .packages .package .package-other-info {
+    float: left;
+    width: 41.66666667%;
+  }
 }
 /*# sourceMappingURL=packages.css.map */

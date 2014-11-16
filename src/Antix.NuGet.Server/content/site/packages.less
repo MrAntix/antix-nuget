@@ -1,4 +1,8 @@
-﻿.packages {
+﻿@import (reference) url('../bootstrap/variables.less');
+@import (reference) url('../bootstrap/mixins/grid.less');
+
+.packages {
+    .make-row();
 
     ul {
         list-style: none;
@@ -28,13 +32,11 @@
         }
 
         .package-info {
-            float: left;
-            width: 55%;
+            .make-sm-column(7);
         }
 
         .package-other-info {
-            float: right;
-            width: 40%;
+            .make-sm-column(5);
         }
     }
 }
