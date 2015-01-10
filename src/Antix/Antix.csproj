@@ -44,7 +44,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.1.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin">
+    <Reference Include="Microsoft.Owin, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin.Security, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -86,7 +87,6 @@
     <Compile Include="Http\Filters\Logging\ActionResponseEntry.cs" />
     <Compile Include="Http\Filters\Logging\LogActionAttribute.cs" />
     <Compile Include="Http\Filters\Logging\LogActionFilter.cs" />
-    <Compile Include="Http\Filters\Response\ResponseGlobalFilter.cs" />
     <Compile Include="Http\Filters\ServiceFilterProvider.cs" />
     <Compile Include="Http\HttpRequestMessageExtensions.cs" />
     <Compile Include="IO\FileSystemChangedEvent.cs" />
@@ -110,8 +110,10 @@
     </Compile>
     <Compile Include="Services\IService.cs" />
     <Compile Include="Services\IServiceHandler.cs" />
-    <Compile Include="Services\Models\Response.cs" />
-    <Compile Include="Services\Models\ResponseErrorCollection.cs" />
+    <Compile Include="Services\Models\IServiceResponse.cs" />
+    <Compile Include="Services\Models\IServiceResponseExtensions.cs" />
+    <Compile Include="Services\Models\ServiceErrorCollection.cs" />
+    <Compile Include="Services\Models\ServiceResponse.cs" />
     <Compile Include="Services\ServiceHandler.cs" />
     <Compile Include="Services\ServiceSyncExtensions.cs" />
     <Compile Include="SignalR\SignalRContractResolver.cs" />

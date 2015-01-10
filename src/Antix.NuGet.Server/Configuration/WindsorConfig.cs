@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.Web.Http;
+﻿using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Dispatcher;
 using System.Web.Http.Filters;
@@ -60,12 +58,12 @@ namespace Antix.NuGet.Server.Configuration
 
             hubConfiguration.Resolver
                 .Register(
-                    typeof(IHubActivator),
+                    typeof (IHubActivator),
                     () => new SignalRHubActivator(container.Resolve));
             hubConfiguration.Resolver
                 .Register(
-                    typeof(JsonSerializer),
-                    ()=>new JsonSerializer
+                    typeof (JsonSerializer),
+                    () => new JsonSerializer
                     {
                         ContractResolver = new SignalRContractResolver()
                     });
@@ -231,23 +229,9 @@ namespace Antix.NuGet.Server.Configuration
 
         static Log.Delegate CreateLogDelegate()
         {
-            if (!Log.DEBUG)
-            {
-                return Log.ToDebug;
-            }
-            return l => (ex, f, a) =>
-            {
-                var m = string.Format(f, a);
-                Trace.WriteLine(string.Format(
-                    "{0:G} [{1}]: {2}", DateTime.UtcNow, l, m));
-                if (ex != null)
-                {
-                    Trace.WriteLine(ex);
-                }
-
-                Trace.Flush();
-                Trace.Close();
-            };
+            return Log.DEBUG
+                ? Log.ToDebug
+                : Log.ToTrace;
         }
     }
 }

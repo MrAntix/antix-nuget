@@ -5,7 +5,7 @@ using Antix.Services.Models;
 namespace Antix.NuGet.Packages
 {
     public interface ISearchPackagesService :
-        IServiceInOut<SearchPackageCriteria, Response<SearchPackageResults>>
+        IServiceInOut<SearchPackageCriteria, ServiceResponse<SearchPackageResults>>
     {
     }
 }

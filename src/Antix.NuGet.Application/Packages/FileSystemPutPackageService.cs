@@ -22,7 +22,7 @@ namespace Antix.NuGet.Application.Packages
             _packageInfoService = packageInfoService;
         }
 
-        public async Task<Response> ExecuteAsync(
+        public async Task<IServiceResponse> ExecuteAsync(
             PutPackageRequest model)
         {
             var metadata = await _packageInfoService.ExecuteAsync(model.Path);
@@ -34,7 +34,7 @@ namespace Antix.NuGet.Application.Packages
                 await source.CopyToAsync(destination);
             }
 
-            return Response.Empty();
+            return ServiceResponse.Empty;
         }
 
         static string CreateStoreStructure(PackageInfo package, string rootDirectory)

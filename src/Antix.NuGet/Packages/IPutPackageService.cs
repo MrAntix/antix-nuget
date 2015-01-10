@@ -5,7 +5,7 @@ using Antix.Services.Models;
 namespace Antix.NuGet.Packages
 {
     public interface IPutPackageService :
-        IServiceInOut<PutPackageRequest, Response>
+        IServiceInOut<PutPackageRequest, IServiceResponse>
     {
     }
 }
