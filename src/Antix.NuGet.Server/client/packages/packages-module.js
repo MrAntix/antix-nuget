@@ -27,11 +27,14 @@ angular.module('packages', [
 
             return function (dependenciesString) {
 
-                return "<li>" +
+                if (!dependenciesString || dependenciesString.length === 0)
+                    return '<li>(none)</li>';
+
+                return '<li>' +
                     dependenciesString
                     .replace(/:/g, ' ')
                     .split('|').join('</li><li>')
-                    + "</li>";
+                    + '</li>';
             }
         }
     ])

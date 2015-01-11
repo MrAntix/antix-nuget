@@ -29,8 +29,9 @@ namespace Antix.NuGet.Server.Configuration
                     .Include("~/Content/bootstrap.css")
                     .Include("~/Content/animate.css")
                     .IncludeDirectory("~/Scripts/antix/", "*.css", true)
-                    .Include("~/Content/site.css")
                     .IncludeDirectory("~/Content/site/", "*.css", true)
+                    .Include("~/Content/site.css")
+                    .IncludeDirectory("~/client/", "*.css", true)
                 );
 
         }

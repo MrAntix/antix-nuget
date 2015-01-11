@@ -1,5 +1,5 @@
-﻿@import (reference) url('../bootstrap/variables.less');
-@import (reference) url('../bootstrap/mixins/grid.less');
+﻿@import (reference) url('../../content/variables.less');
+@import (reference) url('../../content/bootstrap/mixins/grid.less');
 
 .packages {
     .make-row();
@@ -14,7 +14,7 @@
         float: left;
         position: relative;
         overflow: auto;
-        padding:5px;
+        padding: 5px;
         width: 33.3333%;
 
         .package-content {
@@ -35,6 +35,10 @@
             .package-info a {
                 -ms-word-break: break-all;
                 word-break: break-all;
+            }
+
+            .package-other-info > div {
+                margin-bottom: 10px;
             }
         }
     }

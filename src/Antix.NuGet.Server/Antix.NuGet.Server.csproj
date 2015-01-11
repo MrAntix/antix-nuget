@@ -172,10 +172,10 @@
       <DependentUpon>icons.css</DependentUpon>
     </Content>
     <Content Include="content\site\open-sans.css" />
-    <Content Include="content\site\packages.css">
+    <Content Include="client\packages\packages.css">
       <DependentUpon>packages.less</DependentUpon>
     </Content>
-    <Content Include="content\site\packages.min.css">
+    <Content Include="client\packages\packages.min.css">
       <DependentUpon>packages.css</DependentUpon>
     </Content>
     <Content Include="content\site\page-header.css">
@@ -218,8 +218,8 @@
       <DependentUpon>variables.css</DependentUpon>
     </Content>
     <Content Include="client\packages\packages.cshtml" />
-    <Content Include="content\site\packages.less" />
-    <Content Include="content\site\packages.css.map">
+    <Content Include="client\packages\packages.less" />
+    <Content Include="client\packages\packages.css.map">
       <DependentUpon>packages.css</DependentUpon>
     </Content>
     <Content Include="content\site\page-header.less" />

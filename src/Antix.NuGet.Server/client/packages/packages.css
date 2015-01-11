@@ -30,6 +30,9 @@
   -ms-word-break: break-all;
   word-break: break-all;
 }
+.packages .package .package-content .package-other-info > div {
+  margin-bottom: 10px;
+}
 .packages .package:nth-child(4n) > div {
   background-color: #fff;
 }
