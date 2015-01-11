@@ -41,7 +41,8 @@ namespace Antix.Xml
             var node = nodes.SingleOrDefault();
             if (node != null)
             {
-                if (node.HasElements || node.HasAttributes)
+                if (node.HasElements
+                    || node.HasAttributes)
                 {
                     result = new DynamicXml(node);
                 }

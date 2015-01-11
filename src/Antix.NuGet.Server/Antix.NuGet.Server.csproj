@@ -339,9 +339,6 @@
     <Content Include="Scripts\antix\status\antix-status.css" />
     <Content Include="Scripts\antix\status\antix-status.js" />
     <Content Include="Scripts\antix\status\antix-status.min.css" />
-    <Content Include="Scripts\antix\status\antix-status.less" />
-    <Content Include="Scripts\antix\status\antix-status.css.map" />
-    <Content Include="Scripts\antix\status\antix-status.cshtml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\errors.json" />
@@ -1098,6 +1095,9 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
+    <Content Include="Scripts\antix\status\antix-status.less" />
+    <Content Include="Scripts\antix\status\antix-status.css.map" />
+    <Content Include="Scripts\antix\status\antix-status.cshtml" />
     <Content Include="Scripts\antix\cell-layout\cell-layout.less" />
     <Content Include="Scripts\antix\cell-layout\cell-layout.css.map" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
