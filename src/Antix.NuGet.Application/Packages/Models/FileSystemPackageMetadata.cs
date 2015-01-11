@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Antix.NuGet.Packages;
 using Antix.NuGet.Packages.Models;
+using Antix.Xml;
 
 namespace Antix.NuGet.Application.Packages.Models
 {
@@ -58,9 +59,16 @@ namespace Antix.NuGet.Application.Packages.Models
             if (metadata.dependencies == null) return string.Empty;
 
             var dependencies = new List<string>();
-            foreach (var dependency in metadata.dependencies.dependency)
+            var xml = metadata.dependencies.dependency;
+            if (xml is DynamicXml) // list is not detectable for single elements
+                dependencies.Add(GetDependency(xml));
+            else
             {
-                dependencies.Add(GetDependency(dependency));
+
+                foreach (var dependency in metadata.dependencies.dependency)
+                {
+                    dependencies.Add(GetDependency(dependency));
+                }
             }
 
             return string.Join("|", dependencies);
