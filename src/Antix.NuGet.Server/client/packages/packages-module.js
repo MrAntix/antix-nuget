@@ -1,7 +1,8 @@
 ﻿'use strict';
 
 angular.module('packages', [
-    'ngResource', 'ngSanitize'
+    'ngResource', 'ngSanitize',
+    'antix.cellLayout'
 ])
 
     .directive('packages',

@@ -1,34 +1,37 @@
 ﻿<div class="packages">
 
-    <ul>
-        <li class="package"
+    <ul cell-layout-container>
+        <li class="package" cell-layout-cell
             ng-repeat="package in packages">
+            
+            <div class="package-content">
 
-            <img src="{{package.iconUrl}}" alt="{{package.id}} icon" />
-            <div class="package-info">
-                <h4>
-                    <a href="/package/{{package.id}}/{{package.version}}">
-                        {{package.id}}
-                        <small>{{package.version}}</small>
-                    </a>
-                </h4>
-                <h5>{{package.title}}</h5>
-                <p>
-                    <a href="{{package.projectUrl}}">{{package.projectUrl | url}}</a>
-                    <span ng-if="package.licenceUrl">
-                        [<a href="{{package.licenceUrl}}">licence</a>]
-                    </span>
-                </p>
-                <hr/>
-                <p>{{package.description}}</p>
-            </div>
+                <img src="{{package.iconUrl}}" alt="{{package.id}} icon" />
+                <div class="package-info">
+                    <h4>
+                        <a href="/package/{{package.id}}/{{package.version}}">
+                            {{package.id}}
+                            <small>{{package.version}}</small>
+                        </a>
+                    </h4>
+                    <h5>{{package.title}}</h5>
+                    <p>
+                        <a href="{{package.projectUrl}}">{{package.projectUrl | url}}</a>
+                        <span ng-if="package.licenceUrl">
+                            [<a href="{{package.licenceUrl}}">licence</a>]
+                        </span>
+                    </p>
+                    <hr />
+                    <p>{{package.description}}</p>
+                </div>
 
-            <div class="package-other-info">
-                <p>
-                    <label>Dependencies</label>
-                    <ul ng-bind-html="package.dependencies | packageDependencies"></ul>
-                </p>
-                <p><label>Tags</label> {{package.tags}}</p>
+                <div class="package-other-info">
+                    <p>
+                        <label>Dependencies</label>
+                        <ul ng-bind-html="package.dependencies | packageDependencies"></ul>
+                    </p>
+                    <p><label>Tags</label> {{package.tags}}</p>
+                </div>
             </div>
         </li>
     </ul>
