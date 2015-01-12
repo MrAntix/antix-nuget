@@ -29,6 +29,7 @@
 .packages .package .package-content .package-info a {
   -ms-word-break: break-all;
   word-break: break-all;
+  display: inline-block;
 }
 .packages .package .package-content .package-other-info > div {
   margin-bottom: 10px;
