@@ -51,8 +51,9 @@
     <Reference Include="Castle.Windsor">
       <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.SignalR.Core">
-      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.1.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.1.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
@@ -191,7 +192,9 @@
       <DependentUpon>variables.css</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Index.cshtml" />
     <Content Include="content\packages\Antix\code\Antix.code.7.0.0.0.nupkg" />
     <Content Include="content\packages\Antix\Data\Keywords\code\Antix.Data.Keywords.code.7.0.0.0.nupkg" />
@@ -333,6 +336,8 @@
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\AngularUI\ui-router.js" />
     <Content Include="Scripts\AngularUI\ui-router.min.js" />
+    <Content Include="Scripts\antix\cell-layout\cell-layout-icon-32x32.png" />
+    <Content Include="Scripts\antix\cell-layout\cell-layout-icon.png" />
     <Content Include="Scripts\antix\cell-layout\cell-layout.css" />
     <Content Include="Scripts\antix\cell-layout\cell-layout.js" />
     <Content Include="Scripts\antix\cell-layout\cell-layout.min.css" />
@@ -1098,6 +1103,7 @@
     <Content Include="Scripts\antix\status\antix-status.less" />
     <Content Include="Scripts\antix\status\antix-status.css.map" />
     <Content Include="Scripts\antix\status\antix-status.cshtml" />
+    <Content Include="Scripts\antix\cell-layout\readme.md" />
     <Content Include="Scripts\antix\cell-layout\cell-layout.less" />
     <Content Include="Scripts\antix\cell-layout\cell-layout.css.map" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
