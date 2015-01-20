@@ -196,17 +196,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Index.cshtml" />
-    <Content Include="content\packages\Antix\code\Antix.code.7.0.0.0.nupkg" />
-    <Content Include="content\packages\Antix\Data\Keywords\code\Antix.Data.Keywords.code.7.0.0.0.nupkg" />
-    <Content Include="content\packages\Antix\Data\Keywords\EF\code\Antix.Data.Keywords.EF.code.7.0.0.0.nupkg" />
-    <Content Include="content\packages\Antix\Data\Static\code\Antix.Data.Static.code.7.0.0.0.nupkg" />
-    <Content Include="content\packages\Antix\Drawing\code\Antix.Drawing.code.7.0.0.0.nupkg" />
-    <Content Include="content\packages\Antix\Html\code\Antix.Html.code.7.0.0.0.nupkg" />
-    <Content Include="content\packages\Antix\Http\code\Antix.Http.code.7.0.0.0.nupkg" />
-    <Content Include="content\packages\Antix\Security\code\Antix.Security.code.7.0.0.0.nupkg" />
-    <Content Include="content\packages\Antix\Services\ActionCache\code\Antix.Services.ActionCache.code.7.0.0.0.nupkg" />
-    <Content Include="content\packages\Antix\Services\code\Antix.Services.code.7.0.0.0.nupkg" />
-    <Content Include="content\packages\Antix\Web\code\Antix.Web.code.7.0.0.0.nupkg" />
     <Content Include="client\home\home.cshtml" />
     <Content Include="content\site.less" />
     <Content Include="content\site.css.map">
@@ -1151,7 +1140,9 @@
       <Name>Antix</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="content\packages\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
