@@ -2,11 +2,14 @@
     .controller('cellLayoutController',
     [
         '$log', '$scope', '$window', '$element',
-        function ($log, $scope, $window, $element) {
+        '$$rAF',
+        function(
+            $log, $scope, $window, $element,
+            $$rAF) {
             var columns,
                 cellElements = [];
 
-            var positionElement = function (cellElement) {
+            var positionElement = function(cellElement) {
                 $log.debug('cellLayoutContainer.positionElement()');
 
                 cellElement.css({ marginTop: 0, marginBottom: 0 });
@@ -23,37 +26,47 @@
                 columns[column] += height;
             }
 
-            this.addElement = function (cellElement) {
+            this.addElement = function(cellElement) {
                 $log.debug('cellLayoutContainer.addElement()');
 
                 cellElements.push(cellElement);
+
+                resize();
             };
 
-            this.removeElement = function (cellElement) {
+            this.removeElement = function(cellElement) {
                 $log.debug('cellLayoutContainer.removeElement()');
 
                 var index = cellElements.indexOf(cellElement);
                 cellElements.splice(index, 1);
+
+                resize();
             };
 
-            var resize = this.resize = function () {
-                $log.debug('cellLayoutContainer.resize(' + cellElements.length + ')');
+            var resizing,
+                resize = this.resize = function () {
+                    if (resizing) return;
+                    resizing = true;
 
-                columns = {};
-                $scope.$evalAsync(function () {
-                    angular.forEach(cellElements, positionElement);
-                });
-            },
-                getSize = function () {
+                    $log.debug('cellLayoutContainer.resize(' + cellElements.length + ')');
+
+                    columns = {};
+                    $$rAF(function () {
+                        $log.debug('cellLayoutContainer.rAF');
+                        angular.forEach(cellElements, positionElement);
+                        resizing = false;
+                    });
+                },
+                getSize = function() {
                     var size = $element[0].offsetWidth;
-                    angular.forEach(cellElements, function (cellElement) {
+                    angular.forEach(cellElements, function(cellElement) {
                         size += cellElement[0].offsetHeight;
                     });
                     return size;
                 };
 
             $scope.$watch(getSize, resize);
-            angular.element($window).on('resize', function () { $scope.$apply(); });
+            angular.element($window).on('resize', resize);
         }
     ])
     .directive('cellLayoutContainer', [
