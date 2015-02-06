@@ -2,7 +2,7 @@
 
     <ul cell-layout-container>
         <li class="package" cell-layout-cell
-            ng-repeat="package in packages">
+            ng-repeat="package in packages track by package.id">
             
             <div class="package-content">
 
