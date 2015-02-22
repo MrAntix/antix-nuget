@@ -336,7 +336,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Decimal _max;
 
         public DecimalMaxPredicate(Decimal max) :
-			base("number-max")
+			base("max")
         {
             _max = max;
         }
@@ -358,7 +358,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Decimal _min;
 
         public DecimalMinPredicate(Decimal min) :
-			base("number-min")
+			base("min")
         {
             _min = min;
         }
@@ -381,7 +381,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Decimal _max;
 
         public DecimalRangePredicate(Decimal min, Decimal max) :
-			base("number-range")
+			base("range")
         {
             _min = min;
             _max = max;
@@ -389,8 +389,8 @@ namespace Antix.Services.Validation.Predicates
 
         public override bool Is(Decimal model)
         {
-            return model <= _min
-					&& model >= _max;
+            return model >= _min
+					&& model <= _max;
         }
 
         public override string ToString()
@@ -405,7 +405,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Double _max;
 
         public DoubleMaxPredicate(Double max) :
-			base("number-max")
+			base("max")
         {
             _max = max;
         }
@@ -427,7 +427,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Double _min;
 
         public DoubleMinPredicate(Double min) :
-			base("number-min")
+			base("min")
         {
             _min = min;
         }
@@ -450,7 +450,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Double _max;
 
         public DoubleRangePredicate(Double min, Double max) :
-			base("number-range")
+			base("range")
         {
             _min = min;
             _max = max;
@@ -458,8 +458,8 @@ namespace Antix.Services.Validation.Predicates
 
         public override bool Is(Double model)
         {
-            return model <= _min
-					&& model >= _max;
+            return model >= _min
+					&& model <= _max;
         }
 
         public override string ToString()
@@ -474,7 +474,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Single _max;
 
         public SingleMaxPredicate(Single max) :
-			base("number-max")
+			base("max")
         {
             _max = max;
         }
@@ -496,7 +496,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Single _min;
 
         public SingleMinPredicate(Single min) :
-			base("number-min")
+			base("min")
         {
             _min = min;
         }
@@ -519,7 +519,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Single _max;
 
         public SingleRangePredicate(Single min, Single max) :
-			base("number-range")
+			base("range")
         {
             _min = min;
             _max = max;
@@ -527,8 +527,8 @@ namespace Antix.Services.Validation.Predicates
 
         public override bool Is(Single model)
         {
-            return model <= _min
-					&& model >= _max;
+            return model >= _min
+					&& model <= _max;
         }
 
         public override string ToString()
@@ -543,7 +543,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Int16 _max;
 
         public Int16MaxPredicate(Int16 max) :
-			base("number-max")
+			base("max")
         {
             _max = max;
         }
@@ -565,7 +565,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Int16 _min;
 
         public Int16MinPredicate(Int16 min) :
-			base("number-min")
+			base("min")
         {
             _min = min;
         }
@@ -588,7 +588,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Int16 _max;
 
         public Int16RangePredicate(Int16 min, Int16 max) :
-			base("number-range")
+			base("range")
         {
             _min = min;
             _max = max;
@@ -596,8 +596,8 @@ namespace Antix.Services.Validation.Predicates
 
         public override bool Is(Int16 model)
         {
-            return model <= _min
-					&& model >= _max;
+            return model >= _min
+					&& model <= _max;
         }
 
         public override string ToString()
@@ -612,7 +612,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Int32 _max;
 
         public Int32MaxPredicate(Int32 max) :
-			base("number-max")
+			base("max")
         {
             _max = max;
         }
@@ -634,7 +634,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Int32 _min;
 
         public Int32MinPredicate(Int32 min) :
-			base("number-min")
+			base("min")
         {
             _min = min;
         }
@@ -657,7 +657,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Int32 _max;
 
         public Int32RangePredicate(Int32 min, Int32 max) :
-			base("number-range")
+			base("range")
         {
             _min = min;
             _max = max;
@@ -665,8 +665,8 @@ namespace Antix.Services.Validation.Predicates
 
         public override bool Is(Int32 model)
         {
-            return model <= _min
-					&& model >= _max;
+            return model >= _min
+					&& model <= _max;
         }
 
         public override string ToString()
@@ -681,7 +681,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Int64 _max;
 
         public Int64MaxPredicate(Int64 max) :
-			base("number-max")
+			base("max")
         {
             _max = max;
         }
@@ -703,7 +703,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Int64 _min;
 
         public Int64MinPredicate(Int64 min) :
-			base("number-min")
+			base("min")
         {
             _min = min;
         }
@@ -726,7 +726,7 @@ namespace Antix.Services.Validation.Predicates
         readonly Int64 _max;
 
         public Int64RangePredicate(Int64 min, Int64 max) :
-			base("number-range")
+			base("range")
         {
             _min = min;
             _max = max;
@@ -734,8 +734,8 @@ namespace Antix.Services.Validation.Predicates
 
         public override bool Is(Int64 model)
         {
-            return model <= _min
-					&& model >= _max;
+            return model >= _min
+					&& model <= _max;
         }
 
         public override string ToString()
@@ -750,7 +750,7 @@ namespace Antix.Services.Validation.Predicates
         readonly UInt16 _max;
 
         public UInt16MaxPredicate(UInt16 max) :
-			base("number-max")
+			base("max")
         {
             _max = max;
         }
@@ -772,7 +772,7 @@ namespace Antix.Services.Validation.Predicates
         readonly UInt16 _min;
 
         public UInt16MinPredicate(UInt16 min) :
-			base("number-min")
+			base("min")
         {
             _min = min;
         }
@@ -795,7 +795,7 @@ namespace Antix.Services.Validation.Predicates
         readonly UInt16 _max;
 
         public UInt16RangePredicate(UInt16 min, UInt16 max) :
-			base("number-range")
+			base("range")
         {
             _min = min;
             _max = max;
@@ -803,8 +803,8 @@ namespace Antix.Services.Validation.Predicates
 
         public override bool Is(UInt16 model)
         {
-            return model <= _min
-					&& model >= _max;
+            return model >= _min
+					&& model <= _max;
         }
 
         public override string ToString()
@@ -819,7 +819,7 @@ namespace Antix.Services.Validation.Predicates
         readonly UInt32 _max;
 
         public UInt32MaxPredicate(UInt32 max) :
-			base("number-max")
+			base("max")
         {
             _max = max;
         }
@@ -841,7 +841,7 @@ namespace Antix.Services.Validation.Predicates
         readonly UInt32 _min;
 
         public UInt32MinPredicate(UInt32 min) :
-			base("number-min")
+			base("min")
         {
             _min = min;
         }
@@ -864,7 +864,7 @@ namespace Antix.Services.Validation.Predicates
         readonly UInt32 _max;
 
         public UInt32RangePredicate(UInt32 min, UInt32 max) :
-			base("number-range")
+			base("range")
         {
             _min = min;
             _max = max;
@@ -872,8 +872,8 @@ namespace Antix.Services.Validation.Predicates
 
         public override bool Is(UInt32 model)
         {
-            return model <= _min
-					&& model >= _max;
+            return model >= _min
+					&& model <= _max;
         }
 
         public override string ToString()
@@ -888,7 +888,7 @@ namespace Antix.Services.Validation.Predicates
         readonly UInt64 _max;
 
         public UInt64MaxPredicate(UInt64 max) :
-			base("number-max")
+			base("max")
         {
             _max = max;
         }
@@ -910,7 +910,7 @@ namespace Antix.Services.Validation.Predicates
         readonly UInt64 _min;
 
         public UInt64MinPredicate(UInt64 min) :
-			base("number-min")
+			base("min")
         {
             _min = min;
         }
@@ -933,7 +933,7 @@ namespace Antix.Services.Validation.Predicates
         readonly UInt64 _max;
 
         public UInt64RangePredicate(UInt64 min, UInt64 max) :
-			base("number-range")
+			base("range")
         {
             _min = min;
             _max = max;
@@ -941,8 +941,8 @@ namespace Antix.Services.Validation.Predicates
 
         public override bool Is(UInt64 model)
         {
-            return model <= _min
-					&& model >= _max;
+            return model >= _min
+					&& model <= _max;
         }
 
         public override string ToString()
@@ -957,7 +957,7 @@ namespace Antix.Services.Validation.Predicates
         readonly DateTime _max;
 
         public DateTimeMaxPredicate(DateTime max) :
-			base("number-max")
+			base("max")
         {
             _max = max;
         }
@@ -979,7 +979,7 @@ namespace Antix.Services.Validation.Predicates
         readonly DateTime _min;
 
         public DateTimeMinPredicate(DateTime min) :
-			base("number-min")
+			base("min")
         {
             _min = min;
         }
@@ -1002,7 +1002,7 @@ namespace Antix.Services.Validation.Predicates
         readonly DateTime _max;
 
         public DateTimeRangePredicate(DateTime min, DateTime max) :
-			base("number-range")
+			base("range")
         {
             _min = min;
             _max = max;
@@ -1010,8 +1010,8 @@ namespace Antix.Services.Validation.Predicates
 
         public override bool Is(DateTime model)
         {
-            return model <= _min
-					&& model >= _max;
+            return model >= _min
+					&& model <= _max;
         }
 
         public override string ToString()
@@ -1026,7 +1026,7 @@ namespace Antix.Services.Validation.Predicates
         readonly DateTimeOffset _max;
 
         public DateTimeOffsetMaxPredicate(DateTimeOffset max) :
-			base("number-max")
+			base("max")
         {
             _max = max;
         }
@@ -1048,7 +1048,7 @@ namespace Antix.Services.Validation.Predicates
         readonly DateTimeOffset _min;
 
         public DateTimeOffsetMinPredicate(DateTimeOffset min) :
-			base("number-min")
+			base("min")
         {
             _min = min;
         }
@@ -1071,7 +1071,7 @@ namespace Antix.Services.Validation.Predicates
         readonly DateTimeOffset _max;
 
         public DateTimeOffsetRangePredicate(DateTimeOffset min, DateTimeOffset max) :
-			base("number-range")
+			base("range")
         {
             _min = min;
             _max = max;
@@ -1079,8 +1079,8 @@ namespace Antix.Services.Validation.Predicates
 
         public override bool Is(DateTimeOffset model)
         {
-            return model <= _min
-					&& model >= _max;
+            return model >= _min
+					&& model <= _max;
         }
 
         public override string ToString()

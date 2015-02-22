@@ -5,7 +5,7 @@ using Antix.Services.Validation.Predicates;
 
 namespace Antix.Services.Validation
 {
-    public class ValidationAssertionList<TModel> 
+    public class ValidationAssertionList<TModel>
     {
         readonly List<Func<TModel, string, IEnumerable<string>>> _actions
             = new List<Func<TModel, string, IEnumerable<string>>>();
@@ -31,7 +31,7 @@ namespace Antix.Services.Validation
                 {
                     var errors = new[] {predicate}.Concat(predicates)
                         .Where(p => !p.Is(model))
-                        .Select(p => string.Format("{0}:{1}", path, p));
+                        .Select(p => string.Format("{0}:{1}", path, p.Name));
 
                     return errors;
                 });

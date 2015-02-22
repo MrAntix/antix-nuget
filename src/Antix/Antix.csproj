@@ -78,6 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Http\CreatedServiceResponse.cs" />
     <Compile Include="Http\Dispatcher\ServiceHttpControllerActivator.cs" />
     <Compile Include="Http\Filters\FilterServiceBase.cs" />
     <Compile Include="Http\Filters\FilterServiceResolver.cs" />
@@ -89,7 +90,6 @@
     <Compile Include="Http\Filters\Logging\LogActionFilter.cs" />
     <Compile Include="Http\Filters\ServiceFilterProvider.cs" />
     <Compile Include="Http\HttpRequestMessageExtensions.cs" />
-    <Compile Include="Http\HttpResponse.cs" />
     <Compile Include="Http\HttpResponseExtenstions.cs" />
     <Compile Include="Http\ICreatedServiceResponse.cs" />
     <Compile Include="IO\FileSystemChangedEvent.cs" />
@@ -101,6 +101,7 @@
     <Compile Include="IO\IOExtensions.cs" />
     <Compile Include="Logging\Log.cs" />
     <Compile Include="Logging\Log.Delegates.cs" />
+    <Compile Include="Logging\Log.Entry.cs" />
     <Compile Include="Logging\Log.Event.cs" />
     <Compile Include="Logging\Log.Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,8 +114,13 @@
     </Compile>
     <Compile Include="Services\IService.cs" />
     <Compile Include="Services\IServiceHandler.cs" />
+    <Compile Include="Services\IServiceIn.cs" />
+    <Compile Include="Services\IServiceInOut.cs" />
+    <Compile Include="Services\IServiceNInOut.cs" />
+    <Compile Include="Services\IServiceOut.cs" />
     <Compile Include="Services\Models\IServiceResponse.cs" />
     <Compile Include="Services\Models\IServiceResponseExtensions.cs" />
+    <Compile Include="Services\Models\IServiceResponseWithData.cs" />
     <Compile Include="Services\Models\ServiceErrorCollection.cs" />
     <Compile Include="Services\Models\ServiceResponse.cs" />
     <Compile Include="Services\ServiceHandler.cs" />
@@ -130,6 +136,7 @@
     <Compile Include="Services\Validation\Predicates\IStandardValidationPredicates.cs" />
     <Compile Include="Services\Validation\Predicates\IStringPredicates.cs" />
     <Compile Include="Services\Validation\Predicates\IValidationPredicate.cs" />
+    <Compile Include="Services\Validation\Predicates\NotNullPredicate.cs" />
     <Compile Include="Services\Validation\Predicates\NullPredicate.cs" />
     <Compile Include="Services\Validation\Predicates\NumberPredicates.cs">
       <AutoGen>True</AutoGen>
@@ -137,7 +144,15 @@
       <DependentUpon>NumberPredicates.tt</DependentUpon>
     </Compile>
     <Compile Include="Services\Validation\Predicates\StandardValidationPredicates.cs" />
-    <Compile Include="Services\Validation\Predicates\StringPredicates.cs" />
+    <Compile Include="Services\Validation\Predicates\StringEmptyPredicate.cs" />
+    <Compile Include="Services\Validation\Predicates\StringLengthPredicate.cs" />
+    <Compile Include="Services\Validation\Predicates\StringMaxLengthPredicate.cs" />
+    <Compile Include="Services\Validation\Predicates\StringMinLengthPredicate.cs" />
+    <Compile Include="Services\Validation\Predicates\StringNotEmptyPredicate.cs" />
+    <Compile Include="Services\Validation\Predicates\StringNotNullOrEmptyPredicate.cs" />
+    <Compile Include="Services\Validation\Predicates\StringNotNullOrWhiteSpacePredicate.cs" />
+    <Compile Include="Services\Validation\Predicates\StringNullOrEmptyPredicate.cs" />
+    <Compile Include="Services\Validation\Predicates\StringNullOrWhiteSpacePredicate.cs" />
     <Compile Include="Services\Validation\Predicates\ValidationPredicateBase.cs" />
     <Compile Include="Services\Validation\Predicates\ValidationPredicateCache.cs" />
     <Compile Include="Services\Validation\Services\ValidatingServiceBase.cs" />

@@ -3,13 +3,13 @@
     [
         '$log', '$scope', '$window', '$element',
         '$$rAF',
-        function(
+        function (
             $log, $scope, $window, $element,
             $$rAF) {
             var columns,
                 cellElements = [];
 
-            var positionElement = function(cellElement) {
+            var positionElement = function (cellElement) {
                 $log.debug('cellLayoutContainer.positionElement()');
 
                 cellElement.css({ marginTop: 0, marginBottom: 0 });
@@ -26,7 +26,7 @@
                 columns[column] += height;
             }
 
-            this.addElement = function(cellElement) {
+            this.addElement = function (cellElement) {
                 $log.debug('cellLayoutContainer.addElement()');
 
                 cellElements.push(cellElement);
@@ -34,7 +34,7 @@
                 resize();
             };
 
-            this.removeElement = function(cellElement) {
+            this.removeElement = function (cellElement) {
                 $log.debug('cellLayoutContainer.removeElement()');
 
                 var index = cellElements.indexOf(cellElement);
@@ -57,9 +57,9 @@
                         resizing = false;
                     });
                 },
-                getSize = function() {
+                getSize = function () {
                     var size = $element[0].offsetWidth;
-                    angular.forEach(cellElements, function(cellElement) {
+                    angular.forEach(cellElements, function (cellElement) {
                         size += cellElement[0].offsetHeight;
                     });
                     return size;

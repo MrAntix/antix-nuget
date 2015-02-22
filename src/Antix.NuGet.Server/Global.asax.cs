@@ -15,7 +15,7 @@ namespace Antix.NuGet.Server
                 return;
 
             WindsorConfig.LogDeletate
-                .Error(m => m(ex, "Unhandled Exception"));
+                .Error(m => m("Unhandled Exception"), ex);
         }
     }
 }
