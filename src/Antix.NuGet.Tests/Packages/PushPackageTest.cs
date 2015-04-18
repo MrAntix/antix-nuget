@@ -19,7 +19,7 @@ namespace Antix.NuGet.Tests.Packages
     {
         const string PackagePath = "resources\\Antix.code.nupkg";
 
-        [Fact]
+        [Fact(Skip = "integration")]
         public void integration_happiness()
         {
             const string baseAddress = "http://localhost:50358";
