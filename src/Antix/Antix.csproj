@@ -104,6 +104,11 @@
     <Compile Include="Logging\Log.Entry.cs" />
     <Compile Include="Logging\Log.Event.cs" />
     <Compile Include="Logging\Log.Extensions.cs" />
+    <Compile Include="Logging\LogSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>LogSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\IHashService.cs" />
     <Compile Include="Security\MD5HashService.cs" />
@@ -118,6 +123,7 @@
     <Compile Include="Services\IServiceInOut.cs" />
     <Compile Include="Services\IServiceNInOut.cs" />
     <Compile Include="Services\IServiceOut.cs" />
+    <Compile Include="Services\IServiceResolver.cs" />
     <Compile Include="Services\Models\IServiceResponse.cs" />
     <Compile Include="Services\Models\IServiceResponseExtensions.cs" />
     <Compile Include="Services\Models\IServiceResponseWithData.cs" />
@@ -171,6 +177,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Logging\LogSettings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>LogSettings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -182,6 +192,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>NumberPredicates.cs</LastGenOutput>
     </None>
+    <None Include="SignalR\README.md" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
