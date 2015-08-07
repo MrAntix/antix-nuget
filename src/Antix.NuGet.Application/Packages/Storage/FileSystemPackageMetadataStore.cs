@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 using Antix.IO;
 using Antix.Logging;
 using Antix.NuGet.Application.Packages.Models;
@@ -116,21 +115,18 @@ namespace Antix.NuGet.Application.Packages.Storage
 
             else
             {
-                Task.Run(() =>
+                foreach (var file in Directory
+                    .GetFiles(rootDirectory, Package.EXTN_PATTERN,
+                        SearchOption.AllDirectories))
                 {
-                    foreach (var file in Directory
-                        .GetFiles(rootDirectory, Package.EXTN_PATTERN,
-                            SearchOption.AllDirectories))
+                    FileChanged(new FileSystemChangedEvent
                     {
-                        FileChanged(new FileSystemChangedEvent
-                        {
-                            Path = file,
-                            Type = FileSystemChangedEventType.AddedOrUpdated
-                        });
-                    }
+                        Path = file,
+                        Type = FileSystemChangedEventType.AddedOrUpdated
+                    });
+                }
 
-                    _eventsBus.Raise(PackageStoreEvents.Initialized);
-                });
+                _eventsBus.Raise(PackageStoreEvents.Initialized);
             }
         }
     }
