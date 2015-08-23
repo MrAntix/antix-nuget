@@ -22,6 +22,13 @@ namespace Antix.NuGet.API.Packages.Formatters
             SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
         }
 
+        public override void SetDefaultContentHeaders(
+            Type type, HttpContentHeaders headers,
+            MediaTypeHeaderValue mediaType)
+        {
+            base.SetDefaultContentHeaders(type, headers, new MediaTypeHeaderValue(Atom));
+        }
+
         public override bool CanReadType(Type type)
         {
             return false;
@@ -48,10 +55,12 @@ namespace Antix.NuGet.API.Packages.Formatters
             Stream stream)
         {
             var rootUri = response.RequestAuthorityUri;
+            var title = response.Title ?? "Packages";
+
             var feed = new SyndicationFeed
             {
-                Id = string.Format("{0}/api/Packages", rootUri),
-                Title = new TextSyndicationContent("Packages")
+                Id = string.Format("{0}/api/{1}", rootUri, title),
+                Title = new TextSyndicationContent(title)
             };
 
             PackageSyndication.ApplyNS(feed.AttributeExtensions, rootUri);
@@ -59,18 +68,18 @@ namespace Antix.NuGet.API.Packages.Formatters
             feed.Links.Add(new SyndicationLink
             {
                 RelationshipType = "self",
-                Title = "Packages",
-                Uri = new Uri("Packages", UriKind.Relative)
+                Title = title,
+                Uri = new Uri(title, UriKind.Relative)
             });
-            
+
             feed.Items = response.Packages
                 .Select(package => PackageSyndication.CreateItem(package, rootUri))
                 .ToList();
-            
+
             using (var writer = XmlWriter
                 .Create(stream, new XmlWriterSettings
                 {
-                    Indent = true
+                    Indent = false
                 }))
             {
                 var atomformatter = new Atom10FeedFormatter(feed);

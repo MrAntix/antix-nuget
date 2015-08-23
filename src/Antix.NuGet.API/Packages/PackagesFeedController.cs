@@ -4,8 +4,8 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Antix.NuGet.API.Packages.Models;
 using Antix.NuGet.Application.Packages.Storage;
+using Antix.NuGet.API.Packages.Models;
 
 namespace Antix.NuGet.API.Packages
 {
@@ -65,7 +65,7 @@ namespace Antix.NuGet.API.Packages
         }
 
         [Route("FindPackagesById()")]
-        public PackageEntryResponse GetEntry(string id)
+        public PackageFeedResponse GetEntry(string id)
         {
             id = id.Trim('\'');
 
@@ -74,10 +74,11 @@ namespace Antix.NuGet.API.Packages
                     i.Id.Equals(id, StringComparison.OrdinalIgnoreCase))
                 .OrderByDescending(i => i.CreatedOn);
 
-            return new PackageEntryResponse
+            return new PackageFeedResponse
             {
+                Title = "FindPackagesById",
                 RequestAuthorityUri = Request.RequestUri.GetLeftPart(UriPartial.Authority),
-                Package = query.FirstOrDefault()
+                Packages = query.ToArray()
             };
         }
 
