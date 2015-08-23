@@ -26,7 +26,20 @@ namespace Antix.NuGet.API.Packages.Formatters
             Type type, HttpContentHeaders headers,
             MediaTypeHeaderValue mediaType)
         {
-            base.SetDefaultContentHeaders(type, headers, new MediaTypeHeaderValue(Atom));
+            headers.Add("DataServiceVersion", "2.0");
+
+            base.SetDefaultContentHeaders(
+                type,
+                headers,
+                new MediaTypeHeaderValue(Atom)
+                {
+                    CharSet = "utf-8",
+                    Parameters =
+                    {
+                        new NameValueHeaderValue("type", "feed")
+                    }
+                }
+                );
         }
 
         public override bool CanReadType(Type type)
